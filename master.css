@@ -93,7 +93,7 @@
                     margin: 0;
                     font-size: 100px;
                     cursor: pointer;
-                    -webkit-touch-callout: none;
+                    user-select: none;
                 }
                 .hero-content p{
                     color: white;
