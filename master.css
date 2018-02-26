@@ -87,13 +87,13 @@
             .hero-content{
                 padding-top: 130px;
                 line-height: 1;
+                user-select: none;
             }
                 #hero-title{
                     color: white;
                     margin: 0;
                     font-size: 100px;
                     cursor: pointer;
-                    user-select: none;
                 }
                 .hero-content p{
                     color: white;
