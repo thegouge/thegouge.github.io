@@ -83,7 +83,6 @@
             background: #555;
             background-image: url('Images/hero.jpg');
             background-size: cover;
-            user-select: none;
         }
             .hero-content{
                 padding-top: 130px;
@@ -94,6 +93,7 @@
                     margin: 0;
                     font-size: 100px;
                     cursor: pointer;
+                    -webkit-touch-callout: none;
                 }
                 .hero-content p{
                     color: white;
