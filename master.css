@@ -85,26 +85,19 @@
             background-size: cover;
         }
             .hero-content{
-                color: white;
                 padding-top: 130px;
                 line-height: 1;
             }
-                .hero-title{
+                #hero-title{
+                    color: white;
                     margin: 0;
                     font-size: 100px;
+                    cursor: pointer;
                 }
                 .hero-content p{
+                    color: white;
                     font-size: 50px;
                     margin-bottom: 60px;
-                }
-                .hero-content a {
-                    color: white;
-                    border: 3px solid white;
-                    border-radius: 3px;
-                    padding: 15px 30px;
-                    margin-right: 20px;
-                    text-decoration: none;
-                    font-size: 28px;
                 }
 
     /* SERVICES */

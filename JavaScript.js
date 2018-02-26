@@ -1,4 +1,4 @@
-var myTitle = document.getElementById("page-header");
+var myTitle = document.getElementById("hero-title");
 
 myTitle.addEventListener("click", function (event) {
   event.target.style.color = randomColor();
