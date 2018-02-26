@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 var myTitle = document.getElementById("hero-title");
-=======
-var myTitle = document.getElementById("heor-title");
->>>>>>> 67f270e89c691ae61108989b6f42978bc0370035
 
 myTitle.addEventListener("click", function (event) {
   event.target.style.color = randomColor();
