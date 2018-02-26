@@ -93,6 +93,7 @@
                     margin: 0;
                     font-size: 100px;
                     cursor: pointer;
+                    user-select: none;
                 }
                 .hero-content p{
                     color: white;
