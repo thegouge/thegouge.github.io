@@ -200,6 +200,7 @@
                 width: 440px;
                 transform: translate(-355px, 122px);
                 font-size: 30px;
+                border-style: none;
                 background: none;
             }
             .Ability-Scores{
