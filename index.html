@@ -9,7 +9,7 @@
     <header>
         <!-- LOGO -->
         <h2 id="page-header">
-            <img id="profile-pic" src="Images/me.jpg" alt="profile pic">
+            <img id="profile-pic" src="Images/sanic.jpg" alt="profile pic">
             Name | Portfolio
         </h2>
         <!-- NAVIGATION -->
@@ -43,8 +43,6 @@
             <div class="section-header">
                 <h2>Key Services</h2>
             </div>
-
-            <script src="JavaScript.js"></script>
 
             <div class="site-section-inside">
                 <div class="service-box">
@@ -97,7 +95,7 @@
         <!-- 'TESTIMONIALS' -->
         <section class="site-section" id="testimonies">
             <div class="site-section-inside">
-                <div class="section header">
+                <div class="section-header">
                     <h2>Testimonials</h2>
                 </div>
 
@@ -137,10 +135,50 @@
             </div>
         </section>
     </div>
+
+    <!--Javascript Demo-->
+    <section class="js">
+        <div class="section-header">
+            <h2>Me Effing with JavaScript</h2>
+        </div>
+
+        <button type="button" onclick="submitStats()" id="char-creator">Create your character!</button>
+
+        <div class="character-sheet">
+
+            <input type="text" id="char-name" name="name" value="Name Namerson">
+                
+
+            <div class="Ability-Scores">
+                <input type="number" class="topstat" id="str" value='8'>
+                <p class="mod" id="strMod"></p>
+
+                <input type="number" class="stat" id="dex" value='8'>
+                <p class="mod" id="dexMod"></p>
+
+                <input type="number" class="stat" id="con" value='8'>
+                <p class="mod" id="conMod"></p>
+
+                <input type="number" class="stat" id="int" value='8'>
+                <p class="mod" id="intMod"></p>
+
+                <input type="number" class="stat" id="wis" value='8'>
+                <p class="mod" id="wisMod"></p>
+
+                <input type="number" class="stat" id="cha" value='8'>
+                <p class="mod" id="chaMod"></p>
+            </div>
+
+        </div>
+
+    </section>
+
     <!--FOOTER-->
     <footer>
-        <img id="profile-pic" src="Images/me.jpg" alt="profile pic">
+        <img id="profile-pic" src="Images/sanic.jpg" alt="profile pic">
         <span>Gouge-Schajer Websites &copy; 2018</span>
     </footer>
+
+    <script src="JavaScript.js"></script>
 </body>
 </html>
