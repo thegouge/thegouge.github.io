@@ -198,15 +198,29 @@
         }
             #char-name {
                 width: 440px;
-                transform: translate(-355px, 122px);
                 font-size: 30px;
                 border-style: none;
                 background: none;
             }
+            .top-block{
+                float: right;
+            }
+                #char-level {
+                    transform: translate();
+                }
+                #classes {}
+                #backgrounds {}
+                #player-name {}
+
+                .second-line {}
+                    #races {}
+                    #alignments {}
+                    #exp {}
+
+            /* Aility Score Column */
             .Ability-Scores{
                 float: left;
-                text-align: left;
-                transform: translate(95px, 326px);
+                transform: translate();
             }
                 .topstat{
                     text-align: center;
@@ -230,6 +244,30 @@
                     margin-top: 10px;
                     margin-left: -10px;
                 }
+                #pasPer {
+                    transform: translate(-24px, 67px);
+                    font-size: 30px;
+                }
+
+            .second-column {
+                float: left;
+            }
+                #inspiration {
+                    width: 30px;
+                    text-align: center;
+                }
+                .saving-throws {}
+                    .saving-throws ul {
+                        list-style: none;
+                    }
+
+                .skills {}
+                    .skills ul {
+                        list-style: none;
+                    }
+
+
+
 
     /* MOBILE RESPONSIVENESS */
 

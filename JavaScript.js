@@ -46,24 +46,9 @@ function submitStats() {
 
 //Calculates the Ability Modifier
 function modGen(s) {
-    var mod;
-    s = parseInt(s);
 
-    for(var i = 0; i <= s; i++){
-        if(i == 0){
-            mod = -5;
-        }
-        else if(i % 2 == 0) {
-            mod++;
-        }
-    }
-    if(mod > 0){
-        mod = '+' + mod;
-    }
-    else {
-        mod = String(mod);
-    }
-    return mod;
+    return Math.floor((s-10)/2);
+
 }
 
 submitStats()

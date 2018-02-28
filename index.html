@@ -147,26 +147,108 @@
         <div class="character-sheet">
 
             <input type="text" id="char-name" name="name" value="Name Namerson">
-                
 
+            <div class="top-block">
+                <input type="number" name="level" value="1" min="1" max="20" id="char-level">
+
+                <input list="class" id="classes" name="classes">
+                <datalist id="class">
+                    <option value="Bard">
+                    <option value="Wizard">
+                    <option value="Sorcerer">
+                </datalist>
+
+                <input list="background" id="backgrounds" name="backgrounds">
+                <datalist id="background">
+                    <option value="Folk Hero">
+                </datalist>
+
+                <input type="text" name="p-name" value="" placeholder="your name" id="player-name">
+
+                <br>
+
+                <input list="race" id="races" name="races" class="second-line">
+                <datalist id="race">
+                    <option value="Half-Elf">
+                </datalist>
+
+                <input list="alignment" id="alignments" name="alignments" class="second-line">
+                <datalist id="alignment">
+                    <option value="chaotic good">
+                    <option value="neutral good">
+                    <option value="lawful good">
+                    <option value="chaotic neutral">
+                    <option value="true neutral">
+                    <option value="lawful neutral">
+                    <option value="chaotic evil">
+                    <option value="neutral evil">
+                    <option value="lawful evil">
+                </datalist>
+
+                <input type="number" name="exp" value="0" class="second-line" id="exp">
+            </div>
+
+            <!-- Ability Score Column -->
             <div class="Ability-Scores">
-                <input type="number" class="topstat" id="str" value='8'>
+                <input type="number" class="topstat" id="str" value='8' min="0" max="20">
                 <p class="mod" id="strMod"></p>
 
-                <input type="number" class="stat" id="dex" value='8'>
+                <input type="number" class="stat" id="dex" value='8' min="0" max="20">
                 <p class="mod" id="dexMod"></p>
 
-                <input type="number" class="stat" id="con" value='8'>
+                <input type="number" class="stat" id="con" value='8' min="0" max="20">
                 <p class="mod" id="conMod"></p>
 
-                <input type="number" class="stat" id="int" value='8'>
+                <input type="number" class="stat" id="int" value='8' min="0" max="20">
                 <p class="mod" id="intMod"></p>
 
-                <input type="number" class="stat" id="wis" value='8'>
+                <input type="number" class="stat" id="wis" value='8' min="0" max="20">
                 <p class="mod" id="wisMod"></p>
 
-                <input type="number" class="stat" id="cha" value='8'>
+                <input type="number" class="stat" id="cha" value='8' min="0" max="20">
                 <p class="mod" id="chaMod"></p>
+
+                <p id="pasPer">10</p>
+            </div>
+
+            <!-- Saving Throws/Proficiency Bonuses -->
+            <div class="second-column">
+                <input type="number" name="insp" min="0" value="0" id="inspiration">
+
+                <p id="pro-bonus">+2</p>
+
+                <div class="saving-throws">
+                    <ul>
+                        <li><input type="radio" name="str-st" value=""></li>
+                        <li><input type="radio" name="dex-st" value=""></li>
+                        <li><input type="radio" name="con-st" value=""></li>
+                        <li><input type="radio" name="int-st" value=""></li>
+                        <li><input type="radio" name="wis-st" value=""></li>
+                        <li><input type="radio" name="cha-st" value=""></li>
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <ul>
+                        <li><input type="radio" name="acrobatics" value="" id="acro"></li>
+                        <li><input type="radio" name="anim-handle" value="" id="anim"></li>
+                        <li><input type="radio" name="arcana" value="" id="arca"></li>
+                        <li><input type="radio" name="athletics" value="" id="athl"></li>
+                        <li><input type="radio" name="deception" value="" id="dece"></li>
+                        <li><input type="radio" name="history" value="" id="hist"></li>
+                        <li><input type="radio" name="insight" value="" id="insi"></li>
+                        <li><input type="radio" name="intimidation" value="" id="inti"></li>
+                        <li><input type="radio" name="medicine" value="" id="medi"></li>
+                        <li><input type="radio" name="nature" value="" id="natu"></li>
+                        <li><input type="radio" name="perception" value="" id="perc"></li>
+                        <li><input type="radio" name="performance" value="" id="perf"></li>
+                        <li><input type="radio" name="persuasion" value="" id="pers"></li>
+                        <li><input type="radio" name="religion" value="" id="reli"></li>
+                        <li><input type="radio" name="sleight" value="" id="hand"></li>
+                        <li><input type="radio" name="stealth" value="" id="stea"></li>
+                        <li><input type="radio" name="survival" value="" id="surv"></li>
+                    </ul>
+                </div>
             </div>
 
         </div>
