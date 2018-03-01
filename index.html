@@ -142,119 +142,113 @@
             <h2>Me Effing with JavaScript</h2>
         </div>
 
-        <button type="button" onclick="submitStats()" id="char-creator">Create your character!</button>
+
+        <button type="button" onclick="updateStats()">click me!</button>
 
         <div class="character-sheet">
 
-            <input type="text" id="char-name" name="name" value="Name Namerson">
-
             <!--top right block of the sheet-->
             <div class="top-block">
-                <input type="number" name="level" value="1" min="1" max="20" id="char-level" onkeydown="return false">
 
-                <input list="class-list" id="classes" name="classes">
-                <datalist id="class-list">
-                    <option value="Barbarian" class="class" id="Barbarian">
-                    <option value="Bard" class="class" id="Bard">
-                    <option value="Cleric" class="class" id="Cleric">
-                    <option value="Druid" class="class" id="Druid">
-                    <option value="Fighter" class="class" id="Fighter">
-                    <option value="Monk" class="class" id="Monk">
-                    <option value="Paladin" class="class" id="Paladin">
-                    <option value="Ranger" class="class" id="Ranger">
-                    <option value="Rogue" class="class" id="Rogue">
-                    <option value="Sorcerer" class="class" id="Sorcerer">
-                    <option value="Warlock" class="class" id="Warlock">
-                    <option value="Wizard" class="class" id="Wizard">
-                </datalist>
+                <!-- Character Name -->
+                <input type="text" id="char-name" name="name" value="Name Namerson">
 
-                <!--Backgrounds-->
-                <input list="background-list" id="backgrounds" name="backgrounds">
-                <datalist id="background-list">
-                    <option value="Acolyte" class="background" id="Acolyte">
-                    <option value="Anthropologist" class="background" id="Anthropologist">
-                    <option value="Archaeologist" class="background" id="Archaeologist">
-                    <option value="Charlatan" class="background" id="Charlatan">
-                    <option value="Investigator" class="background" id="Investigator">
-                    <option value="Clan Crafter" class="background" id="Clan-Crafter">
-                    <option value="Cloistered Scholar" class="background" id="Cloistered-Scholar">
-                    <option value="Courtier" class="background" id="Courtier">
-                    <option value="Criminal/Spy" class="background" id="Criminal/Spy">
-                    <option value="Entertainer" class="background" id="Entertainer">
-                    <option value="Faction Agent" class="background" id="Faction-Agent">
-                    <option value="Far Traveler" class="background" id="Far-Traveler">
-                    <option value="Folk Hero" class="background" id="Folk-Hero">
-                    <option value="Gladiator" class="background" id="Gladiator">
-                    <option value="Guild" class="background" id="Guild">
-                    <option value="Haunted" class="background" id="Haunted">
-                    <option value="Hermit" class="background" id="Hermit">
-                    <option value="Inheritor" class="background" id="Inheritor">
-                    <option value="Knight" class="background" id="Knight">
-                    <option value="Mercenary" class="background" id="Mercenary">
-                    <option value="Noble" class="background" id="Noble">
-                    <option value="Outlander" class="background" id="Outlander">
-                    <option value="Pirate" class="background" id="Pirate">
-                    <option value="Sage" class="background" id="Sage">
-                    <option value="Sailor" class="background" id="Sailor">
-                    <option value="Soldier" class="background" id="Soldier">
-                    <option value="Urban Bounty Hunter" class="background" id="Bounty-Hunter">
-                    <option value="Urchin" class="background" id="Urchin">
-                </datalist>
+                <div class="details">
+                    <!-- Character Level -->
+                    <input type="number" name="level" value="1" min="1" max="20" id="char-level" onkeydown="return false">
 
-                <input type="text" name="p-name" value="" placeholder="your name" id="player-name">
+                    <!-- Class Selector -->
+                    <input list="class-list" id="classes" name="classes">
+                    <datalist id="class-list">
+                        <option value="Barbarian" class="class" id="Barbarian">
+                        <option value="Bard" class="class" id="Bard">
+                        <option value="Cleric" class="class" id="Cleric">
+                        <option value="Druid" class="class" id="Druid">
+                        <option value="Fighter" class="class" id="Fighter">
+                        <option value="Monk" class="class" id="Monk">
+                        <option value="Paladin" class="class" id="Paladin">
+                        <option value="Ranger" class="class" id="Ranger">
+                        <option value="Rogue" class="class" id="Rogue">
+                        <option value="Sorcerer" class="class" id="Sorcerer">
+                        <option value="Warlock" class="class" id="Warlock">
+                        <option value="Wizard" class="class" id="Wizard">
+                    </datalist>
 
-                <br>
+                    <!-- Background Selector -->
+                    <input list="background-list" id="backgrounds" name="backgrounds">
+                    <datalist id="background-list">
+                        <option value="Acolyte" class="background" id="Acolyte">
+                        <option value="Anthropologist" class="background" id="Anthropologist">
+                        <option value="Archaeologist" class="background" id="Archaeologist">
+                        <option value="Charlatan" class="background" id="Charlatan">
+                        <option value="Investigator" class="background" id="Investigator">
+                        <option value="Clan Crafter" class="background" id="Clan-Crafter">
+                        <option value="Cloistered Scholar" class="background" id="Cloistered-Scholar">
+                        <option value="Courtier" class="background" id="Courtier">
+                        <option value="Criminal/Spy" class="background" id="Criminal/Spy">
+                        <option value="Entertainer" class="background" id="Entertainer">
+                        <option value="Faction Agent" class="background" id="Faction-Agent">
+                        <option value="Far Traveler" class="background" id="Far-Traveler">
+                        <option value="Folk Hero" class="background" id="Folk-Hero">
+                        <option value="Gladiator" class="background" id="Gladiator">
+                        <option value="Guild" class="background" id="Guild">
+                        <option value="Haunted" class="background" id="Haunted">
+                        <option value="Hermit" class="background" id="Hermit">
+                        <option value="Inheritor" class="background" id="Inheritor">
+                        <option value="Knight" class="background" id="Knight">
+                        <option value="Mercenary" class="background" id="Mercenary">
+                        <option value="Noble" class="background" id="Noble">
+                        <option value="Outlander" class="background" id="Outlander">
+                        <option value="Pirate" class="background" id="Pirate">
+                        <option value="Sage" class="background" id="Sage">
+                        <option value="Sailor" class="background" id="Sailor">
+                        <option value="Soldier" class="background" id="Soldier">
+                        <option value="Urban Bounty Hunter" class="background" id="Bounty-Hunter">
+                        <option value="Urchin" class="background" id="Urchin">
+                    </datalist>
 
-                <!--Races Datalist-->
-                <input list="race-list" id="races" name="races" class="second-line">
-                <datalist id="race-list">
-                    <option value="Aarakocra" class="race" id="bird">
-                    <option value="Aasimar" class="race" id="angel">
-                    <option value="Bugbear" class="race" id="bear">
-                    <option value="Dragonborn" class="race" id="drag">
-                    <option value="Dwarf" class="race" id="dwarf">
-                    <option value="Elf" class="race" id="elf">
-                    <option value="Feral Tiefling" class="race" id="demon">
-                    <option value="Firbolg" class="race" id="hermit">
-                    <option value="Genasi" class="race" id="genasi">
-                    <option value="Gnome" class="race" id="gnome">
-                    <option value="Goblin" class="race" id="goblin">
-                    <option value="Goliath" class="race" id="giant">
-                    <option value="Half-Elf" class="race" id="h-elf">
-                    <option value="Halfling" class="race" id="hobbit">
-                    <option value="Half-Orc" class="race" id="h-orc">
-                    <option value="Hobgoblin" class="race" id="hob">
-                    <option value="Human" class="race" id="man">
-                    <option value="Kenku" class="race" id="raven">
-                    <option value="Kobold" class="race" id="lilDrag">
-                    <option value="Lizardfolk" class="race" id="liz">
-                    <option value="Orc" class="race" id="orc">
-                    <option value="Tabaxi" class="race" id="kajeet">
-                    <option value="Tiefling" class="race" id="demon">
-                    <option value="Tortle" class="race" id="tortle">
-                    <option value="Triton" class="race" id="merman">
-                    <option value="Yuan-ti" class="race" id="snek">
-                </datalist>
+                    <!-- Player Name -->
+                    <input type="text" name="p-name" value="" id="player-name">
 
-                <!--Alignment Datalist-->
-                <input list="alignment-list" id="alignments" name="alignments" class="second-line">
-                <datalist id="alignment-list">
-                    <option value="chaotic good" id="c-g">
-                    <option value="neutral good" id="n-g">
-                    <option value="lawful good" id="l-g">
-                    <option value="chaotic neutral" id="c-n">
-                    <option value="true neutral" id="n">
-                    <option value="lawful neutral" id="l-n">
-                    <option value="chaotic evil" id="c-e">
-                    <option value="neutral evil" id="n-e">
-                    <option value="lawful evil" id="l-e">
-                </datalist>
+                    <br>
 
-                <!--Experience Points-->
-                <input type="number" name="exp" value="0" class="second-line" id="exp">
+                    <!-- Races Selector -->
+                    <input list="race-list" id="races" class="second-line">
+                    <datalist id="race-list">
+                        <option value="Aarakocra" class="race" id="bird">
+                        <option value="Dragonborn" class="race" id="drag">
+                        <option value="Dwarf" class="race" id="dwarf">
+                        <option value="Elf" class="race" id="elf">
+                        <option value="Genasi" class="race" id="genasi">
+                        <option value="Gnome" class="race" id="gnome">
+                        <option value="Goliath" class="race" id="giant">
+                        <option value="Half-Elf" class="race" id="h-elf">
+                        <option value="Halfling" class="race" id="hobbit">
+                        <option value="Half-Orc" class="race" id="h-orc">
+                        <option value="Human" class="race" id="man">
+                        <option value="Tiefling" class="race" id="demon">
+                    </datalist>
+
+                    <!-- Alignment Selector -->
+                    <input list="alignment-list" id="alignments" name="alignments" class="second-line">
+                    <datalist id="alignment-list">
+                        <option value="chaotic good" id="c-g">
+                        <option value="neutral good" id="n-g">
+                        <option value="lawful good" id="l-g">
+                        <option value="chaotic neutral" id="c-n">
+                        <option value="true neutral" id="n">
+                        <option value="lawful neutral" id="l-n">
+                        <option value="chaotic evil" id="c-e">
+                        <option value="neutral evil" id="n-e">
+                        <option value="lawful evil" id="l-e">
+                    </datalist>
+
+                    <!-- Experience Points -->
+                    <input type="number" name="exp" value="0" class="second-line" id="exp">
+                </div>
             </div>
 
-            <!-- Ability Score Column -->
+            <!-- First Column -->
             <div class="Ability-Scores">
                 <input type="number" class="topstat" id="str" value='8' min="0" max="20" onkeydown="return false">
                 <p class="mod" id="strMod"></p>
@@ -277,7 +271,7 @@
                 <p id="pasPer"></p>
             </div>
 
-            <!-- Saving Throws/Proficiency Bonuses/Other Proficiencies -->
+            <!-- Second Column -->
             <div class="second-column">
 
                 <!-- Inspiration Counter -->
@@ -323,14 +317,15 @@
                 </div>
 
                 <div class="otherPro">
-                    <textarea name="other Proficiencies" rows="8" cols="40" id="otherPro"></textarea>
+                    <textarea name="other Proficiencies" id="otherPro"></textarea>
                 </div>
             </div>
 
-            <!-- Middle Column -->
-            <div class="middle-column">
+            <!-- Third Column -->
+            <div class="third-column">
+
                 <!-- Armor Class -->
-                <input type="number" name="AC" value="0">
+                <input type="number" id="ac" value="0" name="armor-c">
 
                 <!-- initiative -->
                 <p id="initiative"></p>
@@ -339,45 +334,88 @@
                 <p id="speed">0ft</p>
 
                 <!-- Hit Points -->
-                <input type="number" name="max-hp" value="0">
-                <input type="number" name="hp" value="0">
-                <input type="number" name="temp-hp" value="0">
+                <div class="hit-points">
+                    <input type="number" name="max-hp" value="0" id="max-hp">
+                    <br>
+                    <input type="number" name="hp" value="0" id="hp">
+                    <br>
+                    <input type="number" name="temp-hp" value="0" id="temp-hp">
+                </div>
 
                 <!-- Hit Dice -->
-                <p id="hit-type"></p>
-                <p id="hit-dice"></p>
+                <div class="hd">
+                    <p id="hit-type">1d8</p>
+                    <input type="number" id="hit-dice" value="1">
+                </div>
 
                 <!-- Death Saves -->
-                <input type="checkbox" name="success1" class="death-save">
-                <input type="checkbox" name="success2" class="death-save">
-                <input type="checkbox" name="success3" class="death-save" id="success3">
-                <br>
-                <input type="checkbox" name="fail1" class="death-save">
-                <input type="checkbox" name="fail2" class="death-save">
-                <input type="checkbox" name="fail3" class="death-save" id="fail3">
+                <div class="death-saves">
+                    <input type="checkbox" name="success1" class="death-save">
+                    <input type="checkbox" name="success2" class="death-save">
+                    <input type="checkbox" name="success3" class="death-save" id="success3">
+                    <br>
+                    <input type="checkbox" name="fail1" class="death-save">
+                    <input type="checkbox" name="fail2" class="death-save">
+                    <input type="checkbox" name="fail3" class="death-save" id="fail3">
+                </div>
 
                 <!-- Attacks -->
-                <table id="attacks">
-                    <thead></thead>
-                    <tbody>
-                        <tr class="weapon">
-                            <td class="weaponName"><input type="text" name="weaponName" value=""></td>
-                            <td class="atkBonus"><input type="number" name="" value="0"> </td>
-                            <td class="damage/type"></td>
-                        </tr>
-                        <tr class="weapon">
-                            <td class="weaponName"></td>
-                            <td class="atkBonus"></td>
-                            <td class="damage/type"></td>
-                        </tr>
-                        <tr class="weapon">
-                            <td class="weaponName"></td>
-                            <td class="atkBonus"></td>
-                            <td class="damage/type"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="atk-spell">
+                    <table id="attacks">
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text" class="weaponName" id="wn1" value=""></td>
+                                <td><input type="number" class="atkBonus" id="ab1" value="0"></td>
+                                <td><input type="text" class="damageType" id="dt1" value=""></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="weaponName" id="wn2" value=""></td>
+                                <td><input type="number" class="atkBonus" id="ab2" value="0"></td>
+                                <td><input type="text" class="damageType" id="dt2" value=""></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="weaponName" id="wn3" value=""></td>
+                                <td><input type="number" class="atkBonus" id="ab3" value="0"></td>
+                                <td><input type="text" class="damageType" id="dt3" value=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <textarea name="name" class="otherAtks"></textarea>
+                </div>
+
+                <!-- Money and Equipment -->
+                <div class="equipment">
+                    <ul id="mons">
+                        <li><input type="number" class="money" id="copper" value="0"></li>
+                        <li><input type="number" class="money" id="silver" value="0"></li>
+                        <li><input type="number" class="money" id="E" value="0"></li>
+                        <li><input type="number" class="money" id="gold" value="0"></li>
+                        <li><input type="number" class="money" id="plat" value="0"></li>
+                    </ul>
+                    <textarea id="equip"></textarea>
+                </div>
             </div>
+
+            <!-- Fourth Column -->
+            <div class="last-column">
+
+                <!-- Personality Traits -->
+                <textarea rows="4" cols="40" id="pers-traits"></textarea>
+
+                <!-- Ideals -->
+                <textarea rows="3" cols="40" id="ideals"></textarea>
+
+                <!-- Bonds -->
+                <textarea rows="3" cols="40" id="bonds"></textarea>
+
+                <!-- Flaws -->
+                <textarea rows="3" cols="40" id="flaws"></textarea>
+
+                <!-- Features and Traits -->
+                <textarea rows="34" cols="40" id="traits"></textarea>
+            </div>
+
         </div>
 
     </section>

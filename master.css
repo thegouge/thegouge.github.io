@@ -196,31 +196,67 @@
             background-size: cover;
             text-align: center;
         }
-            #char-name {
-                width: 440px;
-                font-size: 30px;
-                border-style: none;
-                background: none;
-            }
-            .top-block{
-                float: right;
-            }
-                #char-level {
-                    transform: translate();
+            .top-block{}
+                #char-name {
+                    transform: translate(-10px, 125px);
+                    width: 440px;
+                    font-size: 30px;
+                    border-style: none;
+                    background: none;
                 }
-                #classes {}
-                #backgrounds {}
-                #player-name {}
+                .details{
+                    transform: translate(-90px, 105px);
+                    float: right;
+                }
+                    #char-level {
+                        width: 35px;
+                        text-align: center;
+                        border: none;
+                        background: none;
+                    }
+                    #classes {
+                        text-align: center;
+                        border: none;
+                        background: none;
+                    }
+                    #backgrounds {
+                        text-align: center;
+                        border: none;
+                        background: none;
+                    }
+                    #player-name {
+                        width: 180px;
+                        text-align: center;
+                        border: none;
+                        background: none;
+                    }
 
-                .second-line {}
-                    #races {}
-                    #alignments {}
-                    #exp {}
+                    .second-line {
+                        transform: translate(-15px);
+                        margin-top: 30px;
+                    }
+                        #races {
+                            width: 37%;
+                            border: none;
+                            background: none;
+                        }
+                        #alignments {
+                            width: 33%;
+                            border: none;
+                            background: none;
+                        }
+                        #exp {
+                            width: 150px;
+                            border: none;
+                            background: none;
+                            text-align: center;
+                        }
 
             /* Aility Score Column */
             .Ability-Scores{
+                width: 10%;
                 float: left;
-                transform: translate();
+                transform: translate(62px, 280px);
             }
                 .topstat{
                     text-align: center;
@@ -245,41 +281,263 @@
                     margin-left: -10px;
                 }
                 #pasPer {
-                    transform: translate(-24px, 67px);
+                    text-align: center;
+                    transform: translate(-38px, 67px);
                     font-size: 30px;
                 }
 
+            /* Second Column */
             .second-column {
+                transform: translate(43px, 230px);
+                width: 23%;
                 float: left;
             }
                 #inspiration {
-                    width: 30px;
+                    transform: translate(-69px, 1px);
+                    width: 35px;
                     text-align: center;
+                    border: none;
                 }
                 #pro-bonus {
+                    transform: translate(-111px, 80px);
                     width: 30px;
+                    text-align: center;
+                    border: none;
                 }
-                .saving-throws {}
+                .saving-throws {
+                    transform: translate(1px, 120px);
+                }
                     .saving-throws ul {
                         list-style: none;
                     }
-                        .savingThrow {
-                            float: left;
+                        .saving-throws ul li {
+                            margin-top: 4px;
+                            width: 20%;
                         }
+                            .savingThrow {
+                                margin-top: 6px;
+                                float: left;
+                            }
+                            .saving-throws ul li p {
+                                margin-left: 20px;
+                            }
 
-                .skills {}
+                .skills {
+                    transform: translate(1px, 193px);
+                }
                     .skills ul {
                         list-style: none;
                     }
-                        .skill {
-                            float: left;
+                        .skills ul li {
+                            margin-top: 4px;
+                            width: 20%;
                         }
+                            .skill {
+                                margin-top: 6px;
+                                float: left;
+                            }
+                            .skills ul li p {
+                                margin-left: 20px;
+                            }
                 #otherPro {
+                    width: 346px;
+                    height: 275px;
+                    transform: translate(-105px, 326px);
                     resize: none;
+                    background: none;
+                    padding: 5px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    border: none;
+                    line-height: 23px;
                 }
+            /* Third Column */
+            .third-column {
+                transform: translate(0px, 265px);
+                width: 33%;
+                float: left;
+            }
+                #ac {
+                    float: left;
+                    transform: translate(77px, -50px);
+                    border: none;
+                    background: none;
+                    width: 50px;
+                    font-size: 30px;
+                    text-align: center;
+                }
+                #initiative {
+                    transform: translate(-25px, -48px);
+                    font-size: 40px;
+                    background: none;
+                }
+                #speed {
+                    transform: translate(133px, -107px);
+                    font-size: 40px;
+                }
+                .hit-points {
+                    display: block;
+                }
+                    #max-hp {
+                        transform: translate(73px, -60px);
+                        text-align: center;
+                        width: 190px;
+                        height: 20px;
+                        background: none;
+                        border: none;
+                    }
+                    #hp {
+                        transform: translate(8px, -50px);
+                        text-align: center;
+                        font-size: 40px;
+                        width: 300px;
+                        border: none;
+                        background: none;
+                    }
+                    #temp-hp {
+                        transform: translate(8px, -3px);
+                        text-align: center;
+                        font-size: 40px;
+                        width: 300px;
+                        border: none;
+                        background: none;
+                    }
+                .hd {
+                    transform: translate(-70px, 45px);
+                }
+                    #hit-type {}
+                    #hit-dice {
+                        transform: translate(-13px, 10px);
+                        width: 140px;
+                        text-align: center;
+                        font-size: 25px;
+                        border: none;
+                        background: none;
+                    }
+                .death-saves {
+                    transform: translate(133px, -9px);
+                }
+                    .death-save {
+                        margin-bottom: 14px;
+                        margin-right: 10px;
+                    }
+                .atk-spell {}
+                    #attacks {
+                        transform: translate(40px, 73px);
+                    }
+                        #attacks tr {
+                            height: 30px;
+                        }
+                            .weaponName {
+                                margin-bottom: 9px;
+                                width: 130px;
+                                background: none;
+                                border: none;
+                            }
+                            .atkBonus {
+                                margin-bottom: 9px;
+                                margin-left: 20px;
+                                text-align: center;
+                                width: 60px;
+                                background: none;
+                                border: none;
+                            }
+                            .damageType {
+                                margin-bottom: 13px;
+                                margin-left: 0px;
+                                width: 120px;
+                                background: none;
+                                border: none;
+                            }
+                        .otherAtks {
+                            transform: translate(6px, 83px);
+                            resize: none;
+                            width: 358px;
+                            height: 225px;
+                            background: none;
+                            line-height: 23px;
+                            border: none;
+                        }
+                .equipment {
+                    transform: translate(35px, 152px);
+                }
+                    #mons {
+                        transform: translate(-6px, -10px);
+                        list-style: none;
+                        float: left;
+                        width: auto;
+                    }
+                        .money {
+                            width: 50px;
+                            float: left;
+                            margin-bottom: 22px;
+                            text-align: center;
+                            font-size: 20px;
+                            background: none;
+                            border: none;
+                        }
+                        #mons li {}
+                    #equip {
+                        transform: translate(8px, -30px);
+                        float: left;
+                        resize: none;
+                        width: 256px;
+                        height: 342px;
+                        background: none;
+                        line-height: 23px;
+                        border: none;
+                    }
 
-
-
+            /* Last Column */
+            .last-column {
+                transform: translate(-33px, 203px);
+                width: 33%;
+                float: right;
+            }
+                #pers-traits {
+                    line-height: 26px;
+                    resize: none;
+                    width: 330px;
+                    height: 99px;
+                    background: none;
+                    border: none;
+                    margin-bottom: 33px;
+                }
+                #ideals {
+                    line-height: 26px;
+                    resize: none;
+                    width: 330px;
+                    height: 76px;
+                    background: none;
+                    border: none;
+                    margin-bottom: 30px;
+                }
+                #bonds {
+                    line-height: 26px;
+                    resize: none;
+                    width: 330px;
+                    height: 75px;
+                    background: none;
+                    border: none;
+                    margin-bottom: 30px;
+                }
+                #flaws {
+                    line-height: 26px;
+                    resize: none;
+                    width: 330px;
+                    height: 75px;
+                    background: none;
+                    border: none;
+                    margin-bottom: 50px;
+                }
+                #traits {
+                    line-height: 23px;
+                    resize: none;
+                    width: 360px;
+                    height: 777px;
+                    background: none;
+                    border: none;
+                }
     /* MOBILE RESPONSIVENESS */
 
 @media screen and (max-width: 375px) {
