@@ -256,16 +256,27 @@
                     width: 30px;
                     text-align: center;
                 }
+                #pro-bonus {
+                    width: 30px;
+                }
                 .saving-throws {}
                     .saving-throws ul {
                         list-style: none;
                     }
+                        .savingThrow {
+                            float: left;
+                        }
 
                 .skills {}
                     .skills ul {
                         list-style: none;
                     }
-
+                        .skill {
+                            float: left;
+                        }
+                #otherPro {
+                    resize: none;
+                }
 
 
 
