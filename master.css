@@ -215,18 +215,15 @@
                         background: none;
                     }
                     #classes {
-                        text-align: center;
                         border: none;
                         background: none;
                     }
                     #backgrounds {
-                        text-align: center;
                         border: none;
                         background: none;
                     }
                     #player-name {
                         width: 180px;
-                        text-align: center;
                         border: none;
                         background: none;
                     }
@@ -249,7 +246,6 @@
                             width: 150px;
                             border: none;
                             background: none;
-                            text-align: center;
                         }
 
             /* Aility Score Column */
@@ -351,6 +347,7 @@
                     border: none;
                     line-height: 23px;
                 }
+
             /* Third Column */
             .third-column {
                 transform: translate(0px, 265px);
@@ -449,7 +446,7 @@
                                 background: none;
                                 border: none;
                             }
-                        .otherAtks {
+                        #otherAtks {
                             transform: translate(6px, 83px);
                             resize: none;
                             width: 358px;
