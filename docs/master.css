@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.float-clear{
+    clear: both;
+}
+    header {
+        background: #222;
+        color: white;
+        padding: 20px 20px;
+    }
+
+    /* logo nest inside header */
+
+        header #page-header {
+            color: inherit;
+            text-decoration: none;
+            width: 49%;
+            display: inline-block
+        }
+        header img {
+            width: 70px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        header h2 {
+            font-size: 16px;
+        }
+            header h2 a {
+                color: inherit;
+                text-decoration: none;
+            }
+            header h2 a:hover {
+                color: orange;
+                transition: 0.5s;
+            }
+
+        /* MAIN NAVIGATION */
+        header #main-navigation {
+            width: 49%;
+            display: inline-block;
+            text-align: right;
+        }
+            header #main-navigation ul {
+                list-style: none;
+                padding: 0;
+            }
+            header #main-navigation ul li {
+                display: inline-block;
+            }
+            header #main-navigation ul a {
+                color: inherit;
+                text-decoration: none;
+                padding: 10px 15px;
+                border-radius: 3px;
+            }
+            header #main-navigation ul a:hover {
+                background: #444;
+                transition: 0.3s ease all;
+            }
+
+    /* FOOTER */
+    footer{
+        background: #222;
+        color: #777;
+        padding: 10px;
+        text-align: center;
+    }
+        footer img {
+            display: block;
+            border-radius: 5px;
+            width: 80px;
+            margin: 0 auto 5px;
+        }
+
+    /* HERO */
+    .main-page{}
+        .hero{
+            min-height: 800px;
+            text-align: center;
+            background: #555;
+            background-image: url('../Images/hero.jpg');
+            background-size: cover;
+        }
+            .hero-content{
+                padding-top: 130px;
+                line-height: 1;
+            }
+                #hero-title{
+                    color: white;
+                    margin: 0;
+                    font-size: 100px;
+                    cursor: pointer;
+                    user-select: none;
+                }
+                .hero-content p{
+                    color: white;
+                    font-size: 50px;
+                    margin-bottom: 60px;
+                }
+
+    /* SERVICES */
+        .site-section{
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+        .section-header{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+            .section-header h2{
+                font-size: 30px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 300;
+                color: #9999
+            }
+        .site-section-inside{
+            width: 80%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+            .site-section-secondary{
+                background: #EFEFEF;
+            }
+
+            .service-box {
+                float: left;
+                width: 24%;
+                padding: 20px 50px;
+                line-height: 1;
+            }
+                .service-box img{
+                    width: 80px;
+                    margin-bottom: 15px;
+                }
+                .service-box h5{
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                    color: #999;
+                    text-transform: uppercase;
+                    font-weight: 300px;
+                    letter-spacing: 2px;
+                }
+
+        .about{
+            background: #ECF0F1;
+            width: 100%;
+            padding: 50px 0;
+        }
+
+    /* TESTIMONIALS */
+        .testimonial-box{
+            display: inline-block;
+            width: 27%;
+            padding: 20px 30px;
+        }
+            .testimonial-content{
+                background: #ECF0F1;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+            }
+                .testimonial-author{}
+                    .testimonial-author img{
+                        float: left;
+                        width: 80px;
+                        border-radius: 50%;
+                        margin-right: 15px;
+                        -webkit-filter: sepia(50%);
+                    }
+                    .testimonial-author h5{
+                        font-size: 18px;
+                        margin: 0;
+                        padding-top: 15px;
+                    }
+                    .testimonial-author span{
+                        color: #999;
+                        font-size: 14px;
+                    }
+
+    /* MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 375px) {
+
+    /* HEADER   */
+    header #page-header {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    header #main-navigation {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+/*  HERO  */
+    .hero {
+        min-height: 300px;
+    }
+    .hero-content {
+        padding-top: 80px;
+    }
+    .hero-title {
+        font-size: 30px;
+    }
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .hero-content a {
+        font-size: 14px;
+        padding: 10px 15px;
+        border-width: 1px;
+        background: #FFF;
+        color: #333;
+
+    }
+
+/* FEATURE BOXES   */
+    .service-box {
+        width: 100%;
+        display: block;
+    }
+
+/* TESTIMONIAL BOXES   */
+    .testimonial-box {
+        width: 100%;
+        display: block;
+}
+}

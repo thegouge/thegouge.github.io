@@ -1,25 +1,3 @@
-// Change the color of the Hero Title by Clicking
-var myTitle = document.getElementById("hero-title");
-
-myTitle.addEventListener("click", function (event) {
-  event.target.style.color = randomColor();
-});
-
-// Return a random number between 0 and 255.
-function randomColorNumber() {
-  return Math.round(Math.random() * 255);
-}
-
-// Return a string in the format of `rgb(256,256,256);`
-function randomColor() {
-  var red = randomColorNumber();
-  var green = randomColorNumber();
-  var blue = randomColorNumber();
-
-  return "rgb(" + red + "," + green + "," + blue + ")";
-}
-
-// New JavaScript app I'm adding Per Ben's Assignment
 // Fills out the DnD character sheet on the Page
 
 // Array of skills
@@ -577,7 +555,7 @@ function modGen(s) {
 
 // Calculates Saving Throw and Skill Bonuses
 function addPro(nam, sta) {
-    var pro = document.getElementById('pro-bonus').value;
+    var pro = document.getElementById('pro-bonus').innerHTML;
     pro = parseInt(pro.replace('+', ''));
 
     var box = document.getElementById(nam);
@@ -607,11 +585,34 @@ function addPro(nam, sta) {
 
 // Level up function
 function levelUp() {
-    console.log('you leveled up!');
+    x = parseInt(document.getElementById("char-level").value);
+    x++;
+    document.getElementById("char-level").value = x;
+    proficiencyChecker(document.getElementById("char-level").value);
+}
+
+function proficiencyChecker(lvl) {
+    if(lvl < 5) {
+        document.getElementById('pro-bonus').innerHTML = "+2";
+    }
+    else if(lvl >= 5 && lvl < 9) {
+        document.getElementById('pro-bonus').innerHTML = "+3";
+    }
+    else if(lvl >= 9 && lvl < 12) {
+        document.getElementById('pro-bonus').innerHTML = "+4";
+    }
+    else if(lvl >= 12 && lvl < 16) {
+        document.getElementById('pro-bonus').innerHTML = "+5";
+    }
+    else if(lvl >=16 && lvl <= 20) {
+        document.getElementById('pro-bonus').innerHTML = "+6";
+    }
 }
 
 // function that resolves calculations
 function updateStats() {
+
+    proficiencyChecker(document.getElementById("char-level").value);
 
     // Calcualte Ability Modifiers
     for(var i = 0; i < stats.length; i++){
@@ -638,6 +639,7 @@ function updateStats() {
         var pro = 0;
     }
     document.getElementById('pasPer').innerHTML = 10 + wis.mod + pro
+
 
 
 }
