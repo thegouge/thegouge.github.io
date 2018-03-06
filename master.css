@@ -133,6 +133,11 @@
                 width: 24%;
                 padding: 20px 50px;
                 line-height: 1;
+                border-radius: 5px;
+            }
+            .service-box:hover {
+                background: #bed6ca;
+                transition: 0.5s ease all;
             }
                 .service-box img{
                     width: 80px;
@@ -159,6 +164,11 @@
             display: inline-block;
             width: 27%;
             padding: 20px 30px;
+            border-radius: 5px;
+        }
+        .testimonial-box:hover {
+            background: #bed6ca;
+            transition: 0.5s;
         }
             .testimonial-content{
                 background: #ECF0F1;
