@@ -84,12 +84,20 @@
         text-align: center;
         margin-bottom: 30px;
     }
+<<<<<<< HEAD
     .section-header h2{
+=======
+    .section-header h2 {
+>>>>>>> 6f88bf62566fd8ca9c7f57387b570d08791a8819
         font-size: 30px;
         letter-spacing: 2px;
         text-transform: uppercase;
         font-weight: 300;
+<<<<<<< HEAD
         color: #606060;
+=======
+        color: #9999;
+>>>>>>> 6f88bf62566fd8ca9c7f57387b570d08791a8819
     }
 
 .js {
