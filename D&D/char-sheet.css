@@ -84,6 +84,13 @@
         text-align: center;
         margin-bottom: 30px;
     }
+    .section-header h2{
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #606060;
+    }
 
 .js {
     background: #ECF0F1;
