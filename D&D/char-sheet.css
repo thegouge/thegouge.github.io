@@ -505,3 +505,15 @@
                 background: none;
                 border: none;
             }
+
+@media all and (max-width: 1000px) {
+    .js {
+        width: 1275px;
+    }
+    header {
+        width: 1235px;
+    }
+    footer {
+        width: 1255px;
+    }
+}

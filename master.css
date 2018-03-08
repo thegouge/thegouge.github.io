@@ -120,7 +120,7 @@
             }
         .site-section-inside{
             width: 100%;
-            /* max-width: 1200px; */
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -218,32 +218,9 @@
         text-align: center;
     }
 
-/*  HERO  */
-    /* .hero {
-        min-height: 300px;
-    }
-    .hero-content {
-        padding-top: 80px;
-    }
-    .hero-title {
-        font-size: 30px;
-    }
-    .hero-content p {
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-    .hero-content a {
-        font-size: 14px;
-        padding: 10px 15px;
-        border-width: 1px;
-        background: #FFF;
-        color: #333;
-
-    } */
-
 /* FEATURE BOXES   */
     .service-box {
-        width: 100%;
+        width: 94%;
         display: block;
     }
     .service-box h4 {
@@ -256,8 +233,11 @@
 
 /* TESTIMONIAL BOXES   */
     .testimonial-box {
-        width: 100%;
+        width: 94%;
         display: block;
     }
+        .testimonial-author {
+            text-align: left;
+        }
 
 }
