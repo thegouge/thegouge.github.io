@@ -1,5 +1,5 @@
 // Change the color of the Hero Title by Clicking
-var myTitle = document.getElementById("hero-title");
+var myTitle = document.getElementById("hero-content");
 
 myTitle.addEventListener("click", function (event) {
   event.target.style.color = randomColor();

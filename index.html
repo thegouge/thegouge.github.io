@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="./css/master.css">
     <title>Alex Gouge-Schajer</title>
 </head>
 <body>
@@ -9,16 +9,16 @@
     <header>
         <!-- LOGO -->
         <h2 id="page-header">
-            <img id="profile-pic" src="./Images/profile-pic.jpg" alt="profile pic">
-            <a href="./index.html">Alex Gouge-Schajer | Portfolio</a>
+            <img src="../Images/profile-pic.jpg" alt="profile pic">
+            <a href="../index.html">Alex Gouge-Schajer | Portfolio</a>
         </h2>
         <!-- NAVIGATION -->
         <nav id="main-navigation">
             <ul>
-                <a href="./index.html#services"><li>Services</li></a>
-                <a href="./index.html#about"><li>About</li></a>
-                <a href="./index.html#testimonies"><li>Testimonials</li></a>
-                <a href="./D&D/char-sheet.html"><li>Javascript Demo</li></a>
+                <a href="https://www.linkedin.com/in/alexander-gouge-schajer-b19695140/"><li>LinkedIn</li></a>
+                <a href="https://vimeo.com/thegouge"><li>Vimeo</li></a>
+                <a href="./links/char-sheet.html"><li>Javascript Application</li></a>
+                <a href="./links/contact.html"><li>Contact</li></a>
             </ul>
         </nav>
         <div class="float-clear"></div>
@@ -28,12 +28,12 @@
     <!-- HERO -->
     <div class="main-page">
         <div class="hero">
-            <div class="hero-content">
+            <div id="hero-content">
                 <h1 id="hero-title">
-                    Click Me!
+                    Alex Gouge-Schajer's Website!
                 </h1>
                 <p>
-                    Tagline: This time, it's Personal
+                    (Pronounced gooj shay-jer)
                 </p>
             </div>
         </div>
@@ -45,28 +45,30 @@
             </div>
 
             <div class="site-section-inside">
-                <div class="service-box">
+                <div class="service-box" id="box1">
                     <img src="./Images/Dev.png" alt="">
                     <h4>Web Development</h4>
                     <p>
-                        This is where I'm going to put what I do with my life.
-                        But first I need to find out exactly what that is
+                        Of the three skills listed here, this is the one I'm still
+                        currently learning. But I'm learning quickly and putting a bunch of what I learn
+                        into this website and the stuff it links to (try clicking the hero title up above)
                     </p>
                 </div>
-                <div class="service-box">
+                <div class="service-box" id="box2">
                     <img src="./Images/Mixing.png" alt="">
-                    <h4>Film Audio Mixing</h4>
+                    <h4>Film-Making</h4>
                     <p>
-                        This is where I'm going to put what I do with my life.
-                        But first I need to find out exactly what that is
+                        The professional skill I have worked the most for the longest time. I mostly specialize in
+                        post production sound mixing and sound editing, but I'm proficient in other departments as well!
                     </p>
                 </div>
-                <div class="service-box">
+                <div class="service-box" id="box3">
                     <img src="./Images/Music.png" alt="">
                     <h4>Music Production</h4>
                     <p>
-                        This is where I'm going to put what I do with my life.
-                        But first I need to find out exactly what that is
+                        I was the music director of the UCSD Tritones for a year in College. And through that I
+                        learned how to arrange a-cappella music. That not only bolstered my current love of music,
+                        but also gave me an understanding of the skills necessary to execute it well
                     </p>
                 </div>
                 <div class="float-clear"></div>
@@ -76,29 +78,26 @@
         <!-- ABOUT -->
         <div class="section-header about" id="about">
             <h2>About me</h2>
-            <p>
-                Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast
-                yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin
-                grog yardarm hempen halter furl. Swab barque interloper chantey
-                doubloon starboard grog black jack gangway rutters. Deadlights jack
-                lad schooner scallywag dance the hempen jig carouser broadside cable
-                strike colors. Bring a spring upon her cable holystone blow the man
-                down spanker Shiver me timbers to go on account lookout wherry doubloon
-                chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
-                Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway.
-                Case shot Shiver me timbers gangplank crack Jennys tea cup ballast
-                Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven
-                seas boatswain schooner gaff booty Jack Tar transom spirits.
+            <p id="about-text">
+                I'm a man originally from Los Angeles, I moved up to Vancouver for a while (because of my dad),
+                and now I'm looking to get back into Los Angeles to pursue my passions of film-making, video game production,
+                coding, and not being unemployed! I'm an eager, young man looking to make a difference in this world
+                and I'm still figuring out exactly how I'll do that. I have so many skills and interests, I don't know what to
+                do with myself! The least of which are: Coding, Guitar, Drums, Video Games, Film-Making, Improv Comedy, Close-Up Magic,
+                American Sign Language, and oh so many more. I'm a jack of many-a-trade with various degrees of proficiency. But I'm
+                quick to learn. I love learning and picking things apart to find out how they work!
             </p>
         </div>
 
         <!-- 'TESTIMONIALS' -->
+        <!-- TODO: replace the testimoials with something else -->
         <section class="site-section" id="testimonies">
-            <div class="site-section-inside">
                 <div class="section-header">
                     <h2>Testimonials</h2>
+                    <h5>to be replaced</h5>
                 </div>
 
+                <div class="site-section-inside">
                 <div class="testimonial-box">
                     <div class="testimonial-content">
                         I loved his services, he was so good at doing the things I asked him to do!
@@ -138,10 +137,10 @@
 
     <!--FOOTER-->
     <footer>
-        <img id="profile-pic" src="./Images/profile-pic.jpg" alt="profile pic">
+        <img src="../Images/profile-pic.jpg" alt="profile pic">
         <span>Gouge-Schajer Websites &copy; 2018</span>
     </footer>
 
-    <script src="JavaScript.js"></script>
+    <script src="../javascript/JavaScript.js"></script>
 </body>
 </html>
