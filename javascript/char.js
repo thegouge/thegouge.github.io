@@ -1,3 +1,4 @@
+// jshint esversion: 6
 // Fills out the DnD character sheet on the Page
 
 // Array of skills
@@ -26,7 +27,7 @@ var skills = [
     'hand', 'dex',
     'stea', 'dex',
     'surv', 'wis'
-]
+];
 
 // Creation of the Ability Score Object
 function Stat(name, score){
@@ -44,16 +45,16 @@ var wis = new Stat('wis', document.getElementById('wis').value);
 var cha = new Stat('cha', document.getElementById('cha').value);
 
 // Event Listeners
-document.getElementById('classes').addEventListener('change', function() {classBonus(document.getElementById('classes').value);})
-document.getElementById('races').addEventListener('change', function() {raceBonus(document.getElementById('races').value);})
-document.getElementById('backgrounds').addEventListener('change', function() {backgroundBonus(document.getElementById('backgrounds').value);})
+document.getElementById('classes').addEventListener('change', function() {classBonus(document.getElementById('classes').value);});
+document.getElementById('races').addEventListener('change', function() {raceBonus(document.getElementById('races').value);});
+document.getElementById('backgrounds').addEventListener('change', function() {backgroundBonus(document.getElementById('backgrounds').value);});
 
 // Initialize Class
 function classBonus(c) {
 
     switch(c){
         case 'Barbarian':
-            document.getElementById('hit-type').innerHTML = "1d12"
+            document.getElementById('hit-type').innerHTML = "1d12";
             document.getElementById('max-hp').value = 12 + con.mod;
             document.getElementById('hp').value = 12 + con.mod;
             document.getElementById('str-st').checked = true;
@@ -64,7 +65,7 @@ function classBonus(c) {
             document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
                 `"Rage", "Unarmored Defense" `;
             document.getElementById('equip').innerHTML = document.getElementById('equip').innerHTML +
-                `either a greataxe or any martial melee weapon, two handaxes or any simple weapon, an explorer's pack, javelins x4 `
+                `either a greataxe or any martial melee weapon, two handaxes or any simple weapon, an explorer's pack, javelins x4 `;
             window.alert(`choose two:
                 Animal Handling
                 Athletics
@@ -86,12 +87,12 @@ function classBonus(c) {
                 Tools: three musical instruments `;
             document.getElementById('otherAtks').innerHTML = document.getElementById('otherAtks').innerHTML +
                 `Cantrips: 2
-                Known Spells: 4 - first level `
+                Known Spells: 4 - first level `;
             document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
                 `Spellcasting, "Bardic inspiration" (d6) `;
             document.getElementById('equip').innerHTML = document.getElementById('equip').innerHTML +
                 `a rapier/longsword/simple weapon, a diplomat's/entertainer's pack, a musical instrument, leather armor, a dagger `;
-            window.alert('choose any three skills!')
+            window.alert('choose any three skills!');
             break;
         case 'Cleric':
             document.getElementById('hit-type').innerHTML = "1d8";
@@ -104,7 +105,7 @@ function classBonus(c) {
                 Weapons: simple weapons `;
             document.getElementById('otherAtks').innerHTML = document.getElementById('otherAtks').innerHTML +
                 `Cantrips: 3
-                Known Spells: ???`
+                Known Spells: ???`;
             document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
                 `spellcasting, "divine domain" `;
             document.getElementById('equip').innerHTML = document.getElementById('equip').innerHTML +
@@ -128,7 +129,7 @@ function classBonus(c) {
                 Tools: Herbalism kit `;
             document.getElementById('otherAtks').innerHTML = document.getElementById('otherAtks').innerHTML +
                 `Cantrips:
-                Known Spells:  `
+                Known Spells:  `;
             document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
                 `Spellcasting, "Druidic", Won't wear armor or shields made of metal `;
             document.getElementById('equip').innerHTML = document.getElementById('equip').innerHTML +
@@ -155,9 +156,9 @@ function classBonus(c) {
             document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
                 `"Fighting Style", "Second Wind" `;
             document.getElementById('equip').innerHTML = document.getElementById('equip').innerHTML +
-                'Chain Mail/leather armor with longbow and 20x arrows,'
-                'a martial weapon with a shield or two martial weapons,'
-                'a light crossbow and 20x bolts or two hand axes'
+                'Chain Mail/leather armor with longbow and 20x arrows,';
+                'a martial weapon with a shield or two martial weapons,';
+                'a light crossbow and 20x bolts or two hand axes';
                 'a dungeoneer\'s pack or an explorer\'s pack ';
             window.alert(`choose two:
                 Acrobatics
@@ -167,7 +168,7 @@ function classBonus(c) {
                 Insight
                 Intimidation
                 Perception
-                Survival`)
+                Survival`);
             break;
         case 'Monk':
             document.getElementById('hit-type').innerHTML = "1d8";
@@ -188,7 +189,7 @@ function classBonus(c) {
                 History
                 Insight
                 Religion
-                Stealth`)
+                Stealth`);
             break;
         case 'Paladin':
             document.getElementById('hit-type').innerHTML = "1d10";
@@ -232,7 +233,7 @@ function classBonus(c) {
                 Nature
                 Perception
                 Stealth
-                Survival`)
+                Survival`);
             break;
         case 'Rogue':
             document.getElementById('hit-type').innerHTML = "1d8";
@@ -271,7 +272,7 @@ function classBonus(c) {
                 `Weapons: daggers, darts, slings, quarterstaffs, light Xbows `;
             document.getElementById('otherAtks').innerHTML = document.getElementById('otherAtks').innerHTML +
                 `Cantrips: 4
-                Known Spells: 2 - 1st level `
+                Known Spells: 2 - 1st level `;
             document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
                 `"Spellcasting", "Sorcerous Origin" `;
             document.getElementById('equip').innerHTML = document.getElementById('equip').innerHTML +
@@ -295,7 +296,7 @@ function classBonus(c) {
                 Weapons: simple weapons `;
             document.getElementById('otherAtks').innerHTML = document.getElementById('otherAtks').innerHTML +
                 `Cantrips: 2
-                Known Spells: 2 - first level `
+                Known Spells: 2 - first level `;
             document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
                 `"Otherworldly Patron", "Pact Magic" `;
             document.getElementById('equip').innerHTML = document.getElementById('equip').innerHTML +
@@ -307,10 +308,10 @@ function classBonus(c) {
                 Intimidation
                 Investigation
                 Nature
-                Religion`)
+                Religion`);
             break;
         case 'Wizard':
-            document.getElementById('hit-type').innerHTML = '1d6'
+            document.getElementById('hit-type').innerHTML = '1d6';
             document.getElementById('max-hp').value = 6 + con.mod;
             document.getElementById('hp').value = 6 + con.mod;
             document.getElementById('int-st').checked = true;
@@ -319,7 +320,7 @@ function classBonus(c) {
                 `Weapons: daggers, darts, slings, quarterstaffs, light Xbows `;
             document.getElementById('otherAtks').innerHTML = document.getElementById('otherAtks').innerHTML +
                 `Cantrips: 3
-                Known Spells: 6 - first level `
+                Known Spells: 6 - first level `;
             document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
                 `"Spellcasting", "Arcane Recovery" `;
             document.getElementById('equip').innerHTML = document.getElementById('equip').innerHTML +
@@ -330,7 +331,7 @@ function classBonus(c) {
                 Insight
                 Investigation
                 Medicine
-                Religion`)
+                Religion`);
             break;
     }
 }
@@ -342,7 +343,7 @@ function raceBonus(r) {
             document.getElementById('dex').value = parseInt(document.getElementById('dex').value) + 2;
             document.getElementById('wis').value = parseInt(document.getElementById('wis').value) + 1;
             document.getElementById('speed').innerHTML = '25ft';
-            document.getElementById('wn1').value = 'Talons'
+            document.getElementById('wn1').value = 'Talons';
             document.getElementById('ab1').value = document.getElementById('pro-bonus').value.replace('+', '');
             document.getElementById('dt1').value = '1d4 slashing';
             document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
@@ -403,7 +404,7 @@ function raceBonus(r) {
             break;
         case 'Half-Elf':
             document.getElementById('cha').value = parseInt(document.getElementById('cha').value) + 2;
-            window.alert('you can assign two more ability points!  and gain proficiency in two skills!')
+            window.alert('you can assign two more ability points!  and gain proficiency in two skills!');
             document.getElementById('speed').innerHTML = '30ft';
             document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
             `Languages: Common, Elvish, one extra `;
@@ -540,12 +541,13 @@ function backgroundBonus(b) {
 // Putting the Ability Scores into an Array
 var stats = [str, dex, con, int, wis, cha];
 
-updateStats()
+updateStats();
+
 
 for (var i = 0; i < stats.length; i++) {
     document.getElementById(stats[i].name).addEventListener("change", function(event){
         updateStats();
-    })
+    });
 }
 
 // Calculates the Ability Modifier
@@ -560,7 +562,7 @@ function addPro(nam, sta) {
 
     var box = document.getElementById(nam);
 
-    var sta = sta + '.mod';
+    sta = sta + '.mod';
     var bon = eval(sta);
 
     if (box.checked == true) {
@@ -622,8 +624,8 @@ function updateStats() {
     }
 
     // Calculate Skill Modifiers
-    for(var i = 0; i < skills.length; i += 2){
-        addPro(skills[i], skills[i+1]);
+    for(var q = 0; q < skills.length; q += 2){
+        addPro(skills[q], skills[q+1]);
     }
 
     // Calculating initiative Mod
@@ -632,13 +634,13 @@ function updateStats() {
     // calculate Passive Perception
     var perception = document.getElementById('perc');
     if(perc.checked == true){
-        var pro = document.getElementById('pro-bonus').value;
+        pro = document.getElementById('pro-bonus').value;
         pro = parseInt(pro.replace('+', ''));
     }
     else {
-        var pro = 0;
+        pro = 0;
     }
-    document.getElementById('pasPer').innerHTML = 10 + wis.mod + pro
+    document.getElementById('pasPer').innerHTML = 10 + wis.mod + pro;
 
 
 
