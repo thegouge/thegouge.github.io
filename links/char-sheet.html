@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="../css/char-sheet.css">
+    <script src="../javascript/data/jquery.js"></script>
     <title>Character Sheet</title>
 </head>
 
@@ -179,22 +180,22 @@
                         <div class="saving-throws">
                             <ul>
                                 <li><input type="checkbox" onclick="addPro('str-st', 'str')" class="savingThrow" id="str-st">
-                                    <p id="str-st-mod" class="stMod"></p>
+                                    <p id="str-st-mod" class="stMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('dex-st', 'dex')" class="savingThrow" id="dex-st">
-                                    <p id="dex-st-mod" class="stMod"></p>
+                                    <p id="dex-st-mod" class="stMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('con-st', 'con')" class="savingThrow" id="con-st">
-                                    <p id="con-st-mod" class="stMod"></p>
+                                    <p id="con-st-mod" class="stMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('int-st', 'int')" class="savingThrow" id="int-st">
-                                    <p id="int-st-mod" class="stMod"></p>
+                                    <p id="int-st-mod" class="stMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('wis-st', 'wis')" class="savingThrow" id="wis-st">
-                                    <p id="wis-st-mod" class="stMod"></p>
+                                    <p id="wis-st-mod" class="stMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('cha-st', 'cha')" class="savingThrow" id="cha-st">
-                                    <p id="cha-st-mod" class="stMod"></p>
+                                    <p id="cha-st-mod" class="stMod">0</p>
                                 </li>
                             </ul>
                         </div>
@@ -203,58 +204,58 @@
                         <div class="skills">
                             <ul>
                                 <li><input type="checkbox" onclick="addPro('acro', 'dex')" class="skill" id="acro">
-                                    <p id="acro-mod" class="skillMod"></p>
+                                    <p id="acro-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('anim', 'wis')" class="skill" id="anim">
-                                    <p id="anim-mod" class="skillMod"></p>
+                                    <p id="anim-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('arca', 'int')" class="skill" id="arca">
-                                    <p id="arca-mod" class="skillMod"></p>
+                                    <p id="arca-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('athl', 'str')" class="skill" id="athl">
-                                    <p id="athl-mod" class="skillMod"></p>
+                                    <p id="athl-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('dece', 'cha')" class="skill" id="dece">
-                                    <p id="dece-mod" class="skillMod"></p>
+                                    <p id="dece-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('hist', 'int')" class="skill" id="hist">
-                                    <p id="hist-mod" class="skillMod"></p>
+                                    <p id="hist-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('insi', 'wis')" class="skill" id="insi">
-                                    <p id="insi-mod" class="skillMod"></p>
+                                    <p id="insi-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('inti', 'cha')" class="skill" id="inti">
-                                    <p id="inti-mod" class="skillMod"></p>
+                                    <p id="inti-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('inve', 'int')" class="skill" id="inve">
-                                    <p id="inve-mod" class="skillMod"></p>
+                                    <p id="inve-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('medi', 'wis')" class="skill" id="medi">
-                                    <p id="medi-mod" class="skillMod"></p>
+                                    <p id="medi-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('natu', 'int')" class="skill" id="natu">
-                                    <p id="natu-mod" class="skillMod"></p>
+                                    <p id="natu-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('perc', 'wis')" class="skill" id="perc">
-                                    <p id="perc-mod" class="skillMod"></p>
+                                    <p id="perc-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('perf', 'cha')" class="skill" id="perf">
-                                    <p id="perf-mod" class="skillMod"></p>
+                                    <p id="perf-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('pers', 'cha')" class="skill" id="pers">
-                                    <p id="pers-mod" class="skillMod"></p>
+                                    <p id="pers-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('reli', 'int')" class="skill" id="reli">
-                                    <p id="reli-mod" class="skillMod"></p>
+                                    <p id="reli-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('hand', 'dex')" class="skill" id="hand">
-                                    <p id="hand-mod" class="skillMod"></p>
+                                    <p id="hand-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('stea', 'dex')" class="skill" id="stea">
-                                    <p id="stea-mod" class="skillMod"></p>
+                                    <p id="stea-mod" class="skillMod">0</p>
                                 </li>
                                 <li><input type="checkbox" onclick="addPro('surv', 'wis')" class="skill" id="surv">
-                                    <p id="surv-mod" class="skillMod"></p>
+                                    <p id="surv-mod" class="skillMod">0</p>
                                 </li>
                             </ul>
                         </div>

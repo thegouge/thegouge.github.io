@@ -1,30 +1,86 @@
 [
-    {"name":"Acolyte"}
-    {"name":"Anthropologist"}
-    {"name":"Archaeologist"}
-    {"name":"Charlatan"}
-    {"name":"Investigator"}
-    {"name":"Clan Crafter"}
-    {"name":"Cloistered Scholar"}
-    {"name":"Courtier"}
-    {"name":"Criminal/Spy"}
-    {"name":"Entertainer"}
-    {"name":"Faction Agent"}
-    {"name":"Far Traveler"}
-    {"name":"Folk Hero"}
-    {"name":"Gladiator"}
-    {"name":"Guild"}
-    {"name":"Haunted"}
-    {"name":"Hermit"}
-    {"name":"Inheritor"}
-    {"name":"Knight"}
-    {"name":"Mercenary"}
-    {"name":"Noble"}
-    {"name":"Outlander"}
-    {"name":"Pirate"}
-    {"name":"Sage"}
-    {"name":"Sailor"}
-    {"name":"Soldier"}
-    {"name":"Urban Bounty Hunter"}
-    {"name":"Urchin"}
+    {
+        "name":"Acolyte"
+    },
+    {
+        "name":"Anthropologist"
+    },
+    {
+        "name":"Archaeologist"
+    },
+    {
+        "name":"Charlatan"
+    },
+    {
+        "name":"Investigator"
+    },
+    {
+        "name":"Clan Crafter"
+    },
+    {
+        "name":"Cloistered Scholar"
+    },
+    {
+        "name":"Courtier"
+    },
+    {
+        "name":"Criminal/Spy"
+    },
+    {
+        "name":"Entertainer"
+    },
+    {
+        "name":"Faction Agent"
+    },
+    {
+        "name":"Far Traveler"
+    },
+    {
+        "name":"Folk Hero"
+    },
+    {
+        "name":"Gladiator"
+    },
+    {
+        "name":"Guild"
+    },
+    {
+        "name":"Haunted"
+    },
+    {
+        "name":"Hermit"
+    },
+    {
+        "name":"Inheritor"
+    },
+    {
+        "name":"Knight"
+    },
+    {
+        "name":"Mercenary"
+    },
+    {
+        "name":"Noble"
+    },
+    {
+        "name":"Outlander"
+    },
+    {
+        "name":"Pirate"
+    },
+    {
+        "name":"Sage"
+    },
+    {
+        "name":"Sailor"
+    },
+    {
+        "name":"Soldier"
+    },
+    {
+        "name":"Urban Bounty Hunter"
+    },
+    {
+        "name":"Urchin"
+    }
 ]

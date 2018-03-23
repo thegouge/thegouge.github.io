@@ -1,33 +1,36 @@
 // jshint esversion: 6
 // Fills out the DnD character sheet on the Page
 
-// Array of skills
-var skills = [
-    'str-st', 'str',
-    'dex-st', 'dex',
-    'con-st', 'con',
-    'int-st', 'int',
-    'wis-st', 'wis',
-    'cha-st', 'cha',
-    'acro', 'dex',
-    'anim', 'wis',
-    'arca', 'int',
-    'athl', 'str',
-    'dece', 'cha',
-    'hist', 'int',
-    'insi', 'wis',
-    'inti', 'cha',
-    'inve', 'int',
-    'medi', 'wis',
-    'natu', 'int',
-    'perc', 'wis',
-    'perf', 'cha',
-    'pers', 'cha',
-    'reli', 'int',
-    'hand', 'dex',
-    'stea', 'dex',
-    'surv', 'wis'
-];
+// Puts data from the 'skills' JSON into an object
+var skills = {
+    "savingThrows": [],
+    "skills": []
+};
+$.getJSON('../javascript/data/skills.json', function(data) {
+        data.savingThrows.map(function(save) {
+            skills.savingThrows.push(save);
+        });
+        data.skills.map(function(skill) {
+            skills.skills.push(skill);
+        });
+    });
+
+// Puts data from the 'races' JSON into an Array
+var races;
+$.getJSON("../javascript/data/races.json", function(json) {
+    races = json;
+    // console.log(races);
+});
+
+// Puts Data from the Classes JSON into an Array
+var classes;
+$.getJSON("../javascript/data/classes.json", function(json) {
+    classes = json;
+    // console.log(races);
+});
+
+//TODO:Create Object for background.json
+
 
 // Creation of the Ability Score Object
 function Stat(name, score){
@@ -45,13 +48,16 @@ var wis = new Stat('wis', document.getElementById('wis').value);
 var cha = new Stat('cha', document.getElementById('cha').value);
 
 // Event Listeners
-document.getElementById('classes').addEventListener('change', function() {classBonus(document.getElementById('classes').value);});
-document.getElementById('races').addEventListener('change', function() {raceBonus(document.getElementById('races').value);});
-document.getElementById('backgrounds').addEventListener('change', function() {backgroundBonus(document.getElementById('backgrounds').value);});
+document.getElementById('classes').addEventListener('change', function()
+                    {classBonus(document.getElementById('classes').value);});
+document.getElementById('races').addEventListener('change', function()
+                    {raceBonus(document.getElementById('races').value);});
+document.getElementById('backgrounds').addEventListener('change', function()
+                    {backgroundBonus(document.getElementById('backgrounds').value);});
 
 // Initialize Class
+// TODO:turn this into a more dynamic function using the json
 function classBonus(c) {
-
     switch(c){
         case 'Barbarian':
             document.getElementById('hit-type').innerHTML = "1d12";
@@ -338,123 +344,23 @@ function classBonus(c) {
 
 // Parse Race Selection
 function raceBonus(r) {
-    switch(r) {
-        case 'Aarakocra':
-            document.getElementById('dex').value = parseInt(document.getElementById('dex').value) + 2;
-            document.getElementById('wis').value = parseInt(document.getElementById('wis').value) + 1;
-            document.getElementById('speed').innerHTML = '25ft';
-            document.getElementById('wn1').value = 'Talons';
-            document.getElementById('ab1').value = document.getElementById('pro-bonus').value.replace('+', '');
-            document.getElementById('dt1').value = '1d4 slashing';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-                `Languages: Common, Aarakocra, Auran `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                `50ft speed while flying `;
-            break;
-        case 'Dragonborn':
-            document.getElementById('cha').value = parseInt(document.getElementById('cha').value) + 1;
-            document.getElementById('str').value = parseInt(document.getElementById('str').value) + 2;
-            document.getElementById('speed').innerHTML = '30ft';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-                `Languages: Common, Draconic `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                `Breath Weapon  `;
-            break;
-        case 'Dwarf':
-            document.getElementById('con').value = parseInt(document.getElementById('con').value) + 2;
-            document.getElementById('speed').innerHTML = '25ft';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, Dwarvis
-            weapons: Battleaxe, handaxe, light hammer, and warhammer `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                `"Darkvision", "Dwarven Resilience", "Stonecunning"  `;
-            break;
-        case 'Elf':
-            document.getElementById('dex').value = parseInt(document.getElementById('dex').value) + 2;
-            document.getElementById('speed').innerHTML = '30ft';
-            document.getElementById('perc').checked = true;
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, Elvish `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                `"Darkvision", "Fey Ancestry", "Trance"  `;
-            break;
-        case 'Genasi':
-            document.getElementById('con').value = parseInt(document.getElementById('con').value) + 2;
-            document.getElementById('speed').innerHTML = '30ft';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, Primordial `;
-            break;
-        case 'Gnome':
-            document.getElementById('int').value = parseInt(document.getElementById('int').value) + 2;
-            document.getElementById('speed').innerHTML = '25ft';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, Gnomish `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                `"Darkvision", "Gnome Cunning"  `;
-            break;
-        case 'Goliath':
-            document.getElementById('str').value = parseInt(document.getElementById('str').value) + 2;
-            document.getElementById('con').value = parseInt(document.getElementById('con').value) + 1;
-            document.getElementById('speed').innerHTML = '30ft';
-            document.getElementById('athl').checked = true;
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, Giant `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                ` "Stone's Endurance", "Powerful Build", "Mountain Born" `;
-            break;
-        case 'Half-Elf':
-            document.getElementById('cha').value = parseInt(document.getElementById('cha').value) + 2;
-            window.alert('you can assign two more ability points!  and gain proficiency in two skills!');
-            document.getElementById('speed').innerHTML = '30ft';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, Elvish, one extra `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                ` "Darkvision", "Fey Ancestry" `;
-            break;
-        case 'Halfling':
-            document.getElementById('dex').value = parseInt(document.getElementById('dex').value) + 2;
-            document.getElementById('speed').innerHTML = '25ft';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, Halfling `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                `"Lucky", "Brave", "Halfling Nimbleness"  `;
-            break;
-        case 'Half-Orc':
-            document.getElementById('str').value = parseInt(document.getElementById('str').value) + 2;
-            document.getElementById('con').value = parseInt(document.getElementById('con').value) + 1;
-            document.getElementById('speed').innerHTML = '30ft';
-            document.getElementById('inti').checked = true;
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, Orc `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                `"Darkvision", "Relentless Endurance", "Savage Attacks" `;
-            break;
-        case 'Human':
-            document.getElementById('str').value = parseInt(document.getElementById('str').value) + 1;
-            document.getElementById('dex').value = parseInt(document.getElementById('dex').value) + 1;
-            document.getElementById('con').value = parseInt(document.getElementById('con').value) + 1;
-            document.getElementById('int').value = parseInt(document.getElementById('int').value) + 1;
-            document.getElementById('wis').value = parseInt(document.getElementById('wis').value) + 1;
-            document.getElementById('cha').value = parseInt(document.getElementById('cha').value) + 1;
-            document.getElementById('speed').innerHTML = '30ft';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, one of your choice `;
-            break;
-        case 'Tiefling':
-            document.getElementById('int').value = parseInt(document.getElementById('int').value) + 1;
-            document.getElementById('cha').value = parseInt(document.getElementById('cha').value) + 2;
-            document.getElementById('speed').innerHTML = '30ft';
-            document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML +
-            `Languages: Common, infernal `;
-            document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML +
-                `"Darkvision", "Hellish Resistance", "Infernal Legacy" `;
-            break;
+    var race = races.find(function(item){return item.name == r;});
+    var bonuses = race.stats;
+
+    console.log('player chose the race', race);
+    for(var i = 0; i < bonuses.length; i++) {
+        document.getElementById(bonuses[i].name).value =
+        parseInt(document.getElementById(race.stats[i].name).value) + race.stats[i].bonus;
     }
+    document.getElementById('speed').innerHTML = race.speed;
+    document.getElementById('otherPro').innerHTML = document.getElementById('otherPro').innerHTML + race.languages;
+    document.getElementById('traits').innerHTML = document.getElementById('traits').innerHTML + race.other;
 }
 
 // Parse Background Selection
+// TODO:populate the Background json
+// TODO:turn this into a more dynamic function using the json
 function backgroundBonus(b) {
-    console.log(b);
     switch(b) {
         case 'Acolyte':
             document.getElementById('insi').checked = true;
@@ -541,9 +447,6 @@ function backgroundBonus(b) {
 // Putting the Ability Scores into an Array
 var stats = [str, dex, con, int, wis, cha];
 
-updateStats();
-
-
 for (var i = 0; i < stats.length; i++) {
     document.getElementById(stats[i].name).addEventListener("change", function(event){
         updateStats();
@@ -588,9 +491,13 @@ function addPro(nam, sta) {
 // Level up function
 function levelUp() {
     x = parseInt(document.getElementById("char-level").value);
-    x++;
-    document.getElementById("char-level").value = x;
-    proficiencyChecker(document.getElementById("char-level").value);
+    if(x != 20) {
+        x++;
+        document.getElementById("char-level").value = x;
+        proficiencyChecker(document.getElementById("char-level").value);
+    } else if (x == 20) {
+        alert("You're Already Max Level!");
+    }
 }
 
 function proficiencyChecker(lvl) {
@@ -617,16 +524,21 @@ function updateStats() {
     proficiencyChecker(document.getElementById("char-level").value);
 
     // Calcualte Ability Modifiers
-    for(var i = 0; i < stats.length; i++){
-        stats[i].abilityScore = document.getElementById(stats[i].name).value;
-        stats[i].mod = modGen(stats[i].abilityScore);
-        document.getElementById(stats[i].name + 'Mod').innerHTML = stats[i].mod;
-    }
+    stats.map(function(s) {
+        s.abilityScore = document.getElementById(s.name).value;
+        s.mod = modGen(s.abilityScore);
+        document.getElementById(s.name + 'Mod').innerHTML = s.mod;
+    });
 
-    // Calculate Skill Modifiers
-    for(var q = 0; q < skills.length; q += 2){
-        addPro(skills[q], skills[q+1]);
-    }
+    // Calculate Saving Throw Modifiers
+    skills.savingThrows.map(function(save) {
+        addPro(save.id, save.stat);
+    });
+
+    //Calculate Skill Modifiers
+    skills.skills.map(function(skill) {
+        addPro(skill.id, skill.stat);
+    });
 
     // Calculating initiative Mod
     document.getElementById('initiative').innerHTML = dex.mod;
@@ -634,14 +546,13 @@ function updateStats() {
     // calculate Passive Perception
     var perception = document.getElementById('perc');
     if(perc.checked == true){
-        pro = document.getElementById('pro-bonus').value;
+        pro = document.getElementById('pro-bonus').innerHTML;
         pro = parseInt(pro.replace('+', ''));
     }
     else {
         pro = 0;
     }
     document.getElementById('pasPer').innerHTML = 10 + wis.mod + pro;
-
-
-
 }
+
+updateStats();

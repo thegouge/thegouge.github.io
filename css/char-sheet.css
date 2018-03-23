@@ -178,10 +178,11 @@
             grid-template-rows: 956px ;
         }
             .ability-scores {
-                margin-top: 85px;
+                margin-top: 85.5px;
                 grid-area: a;
             }
                 .topstat{
+                    background: none;
                     text-align: center;
                     font-size: 30px;
                     font-weight: bold;
@@ -189,17 +190,18 @@
                     width: 50px;
                 }
                 .stat {
+                    background: none;
                     text-align: center;
                     font-size: 30px;
                     font-weight: bold;
                     border-style: none;
                     width: 50px;
                     padding: 5px;
-                    margin-top: 57.5px;
+                    margin-top: 58px;
                 }
                 .mod {
                     text-align: center;
-                    margin-top: 13px;
+                    margin-top: 12.5px;
                     margin-left: -10px;
                 }
 
@@ -311,7 +313,7 @@
                     font-size: 30px;
                     text-align: center;
                     margin-top: 23px;
-                    margin-left: 55px;
+                    margin-left: 60px;
                 }
                 #initiative {
                     grid-area: b;
