@@ -2,8 +2,8 @@
     {
 		"name": "Barbarian",
 		"hitDice": "1d12",
-		"maxHp": 12,
-		"Throws": [
+		"hp": 12,
+		"throws": [
             {
 				"checked": true,
 				"id": "str-st",
@@ -64,8 +64,8 @@
 	{
 		"name": "Bard",
 		"hitDice": "1d8",
-		"maxHp": 8,
-		"Throws": [
+		"hp": 8,
+		"throws": [
             {
 				"name": "Dexterity",
 				"id": "dex-st",
@@ -198,8 +198,8 @@
 	{
 		"name": "Cleric",
 		"hitDice": "1d8",
-		"maxHp": 8,
-		"Throws": [
+		"hp": 8,
+		"throws": [
             {
 				"name": "Wisdom",
 				"id": "wis-st",
@@ -254,8 +254,8 @@
 	{
 		"name": "Druid",
 		"hitDice": "1d8",
-		"maxHp": 8,
-		"Throws": [
+		"hp": 8,
+		"throws": [
             {
 				"name": "Intelligence",
 				"id": "int-st",
@@ -328,8 +328,8 @@
 	{
 		"name": "Fighter",
 		"hitDice": "1d10",
-		"maxHp": 10,
-		"Throws": [
+		"hp": 10,
+		"throws": [
             {
 			"name": "Strength",
 			"id": "str-st",
@@ -400,8 +400,8 @@
 	{
 		"name": "Monk",
 		"hitDice": "1d8",
-		"maxHp": 8,
-		"Throws": [
+		"hp": 8,
+		"throws": [
             {
 				"name": "Strength",
 				"id": "str-st",
@@ -462,8 +462,8 @@
 	{
 		"name": "Paladin",
 		"hitDice": "1d10",
-		"maxHp": 10,
-		"Throws": [
+		"hp": 10,
+		"throws": [
             {
 				"name": "Wisdom",
 				"id": "wis-st",
@@ -524,8 +524,8 @@
 	{
 		"name": "Ranger",
 		"hitDice": "1d10",
-		"maxHp": 10,
-		"Throws": [
+		"hp": 10,
+		"throws": [
             {
 				"name": "Strength",
 				"id": "str-st",
@@ -598,8 +598,8 @@
 	{
 		"name": "Rogue",
 		"hitDice": "1d8",
-		"maxHp": 8,
-		"Throws": [
+		"hp": 8,
+		"throws": [
             {
 				"name": "Dexterity",
 				"id": "dex-st",
@@ -690,8 +690,8 @@
 	{
 		"name": "Sorcerer",
 		"hitDice": "1d6",
-		"maxHp": 6,
-		"Throws": [
+		"hp": 6,
+		"throws": [
             {
 				"name": "Constitution",
 				"id": "con-st",
@@ -752,8 +752,8 @@
 	{
 		"name": "Warlock",
 		"hitDice": "1d8",
-		"maxHp": 8,
-		"Throws": [
+		"hp": 8,
+		"throws": [
             {
 				"name": "Wisdom",
 				"id": "wis-st",
@@ -820,8 +820,8 @@
 	{
 		"name": "Wizard",
 		"hitDice": "1d6",
-		"maxHp": 6,
-		"Throws": [
+		"hp": 6,
+		"throws": [
             {
 				"name": "Intelligence",
 				"id": "int-st",
