@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="../css/char-sheet.css">
+    <link rel="stylesheet" href="../css/master.css">
     <script src="../javascript/data/jquery.js"></script>
     <title>Character Sheet</title>
 </head>
@@ -19,7 +20,14 @@
             <ul>
                 <a href="https://www.linkedin.com/in/alexander-gouge-schajer-b19695140/"><li>LinkedIn</li></a>
                 <a href="https://vimeo.com/thegouge"><li>Vimeo</li></a>
-                <a href="../links/contact.html"><li>Contact</li></a>
+                <a href="https://github.com/thegouge"><li>Github</li></a>
+                <li class="dropdown">
+                    <button class="dropbtn">JavaScript Applications</button>
+                    <div class="dropdown-content">
+                        <a href="./simplejs.html">Simple Stuff</a>
+                    </div>
+                </li>
+                <a href="./contact.html"><li>Contact</li></a>
             </ul>
         </nav>
         <div class="float-clear"></div>
@@ -243,7 +251,7 @@
                     <!-- Hit Dice -->
                     <div class="hd">
                         <p id="hit-type">1d8</p>
-                        <input type="number" id="hit-dice" value="1">
+                        <input type="number" id="hit-dice" value="0">
                     </div>
 
                     <!-- Death Saves -->

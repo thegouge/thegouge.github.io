@@ -7,12 +7,8 @@ var skills = {
     "skills": []
 };
 $.getJSON('../javascript/data/skills.json', function(data) {
-        data.savingThrows.map(function(save) {
-            skills.savingThrows.push(save);
-        });
-        data.skills.map(function(skill) {
-            skills.skills.push(skill);
-        });
+        skills.savingThrows = data.savingThrows.slice();
+        skills.skills = data.skills.slice();
     });
 
 // Puts data from the 'races' JSON into an Array
@@ -133,6 +129,9 @@ function classBonus(c) {
     document.getElementById('otherAtks').innerHTML = spells;
     document.getElementById('equip').innerHTML = equip;
     document.getElementById('traits').innerHTML = traits;
+
+    // Update the rest of the page
+    updateStats();
 }
 
 // Parse Race Selection
@@ -158,6 +157,9 @@ function raceBonus(r) {
     // Apply Updated info to DOM
     document.getElementById('otherPro').innerHTML = otherPro;
     document.getElementById('traits').innerHTML = traits;   
+
+    // Update the rest of the page
+    updateStats();
 }
 
 // Parse Background Selection
@@ -196,6 +198,9 @@ function backgroundBonus(b) {
     document.getElementById('traits').innerHTML = traits;
     document.getElementById('equip').innerHTML = equip;
     document.getElementById('gold').value = gold;
+
+    // Update the rest of the page
+    updateStats();
 
 }
 

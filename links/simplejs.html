@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Javascript</title>
+
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/simple.css">
+
+    <script src="../javascript/data/jquery.js"></script>
+    <script src="../javascript/format.js"></script>
+    <script src="../javascript/simple.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- LOGO -->
+        <h2 id="page-header">
+            <img src="../Images/profile-pic.jpg" alt="profile pic">
+            <a href="../index.html">Alex Gouge-Schajer | Portfolio</a>
+        </h2>
+        <!-- NAVIGATION -->
+        <nav id="main-navigation">
+            <ul>
+                <a href="https://www.linkedin.com/in/alexander-gouge-schajer-b19695140/">
+                    <li>LinkedIn</li>
+                </a>
+                <a href="https://vimeo.com/thegouge">
+                    <li>Vimeo</li>
+                </a>
+                <a href="https://github.com/thegouge">
+                    <li>Github</li>
+                </a>
+                <li class="dropdown">
+                    <button class="dropbtn">JavaScript Applications</button>
+                    <div class="dropdown-content">
+                        <a href="./char-sheet.html">D&amp;D Character Sheet</a>
+                    </div>
+                </li>
+                <a href="./contact.html">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </nav>
+        <div class="float-clear"></div>
+    </header>
+
+
+    <main>
+        <div class="section-header">
+            <h2>
+                A Handful of Simple JavaScript Apps
+            </h2>
+        </div>
+
+        <div class="app-container site-section">
+            <div class="app" id="palindrome">
+
+                <h5 class="app-title" title="Checks to see if inputted string is a palindrome">
+                    Palindrome Checker
+                </h5>
+
+                <input type="text" name="Input a String" id="palindrome-input" value="" placeholder="Input a String">
+
+                <button onclick="palindrome()">Submit</button>
+
+                <p id="palindromeOutput"></p>
+            </div>
+
+            <div class="app" id="birthday">
+
+                <h5 class="app-title" title="outputs the year the user was born based on the age inputted">
+                    Birth Year Checker
+                </h5>
+
+                <input type="number" id="age" placeholder="put in your age" value="">
+                
+                <button onclick="birthday()">Submit</button>
+
+                <p id="birthOutput"></p>
+            </div>
+
+            <div class="app">
+
+                <h5 class="app-title" title="ranks survivor contestants randomly">
+                    Survivor Randomizer
+                </h5>
+
+                <button onclick="survivor()">Outwit Outlast Outplay</button>
+                <ol id="conList"></ol>
+            </div>
+        </div>
+        <div class="float-clear"></div>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <img src="../Images/profile-pic.jpg" alt="profile pic">
+        <span>Gouge-Schajer Websites &copy; 2018</span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+    background: rgb(205, 217, 219);
+}
+.site-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.app-container {
+    width: 100%;
+    text-align: center;
+}
+    .app {
+        display: inline-block;
+        margin: 10px;
+        background: rgb(24, 26, 61);
+        padding: 20px;
+        width: 300px;
+        height: 300px;
+        border: 5px solid rgb(161, 161, 161);
+        overflow: auto;
+    }
+
+        .app-title {
+            text-align: center;
+            padding-bottom: 20px;
+            color: white;
+            cursor: default;
+            user-select: none;
+        }
+
+        main ul li p {
+            color: white;
+        }
+
+        #conList {
+            margin-top: 10px;
+            color: white;
+        }
+            .contestant {
+                float: none;
+                color: inherit;
+                width: initial;
+                height: initial;
+                margin: initial;
+                padding: initial;
+                background: none;
+                border: none;
+                color: white;
+                overflow: initial;
+            }

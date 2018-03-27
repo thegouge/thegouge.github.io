@@ -2,9 +2,16 @@
 <html>
     <head>
         <meta charset="utf-8">
+
+        <link rel="stylesheet" href="../css/master.css">
         <link rel="stylesheet" href="../css/contact.css">
+
         <title>Contact Me!</title>
+
+        <script src="../javascript/data/jquery.js"></script>
+        <script src="../javascript/format.js"></script>
     </head>
+
     <body>
         <header>
             <!-- LOGO -->
@@ -15,26 +22,41 @@
             <!-- NAVIGATION -->
             <nav id="main-navigation">
                 <ul>
-                    <a href="https://www.linkedin.com/in/alexander-gouge-schajer-b19695140/"><li>LinkedIn</li></a>
-                    <a href="https://vimeo.com/thegouge"><li>Vimeo</li></a>
-                    <a href="./links/char-sheet.html"><li>Javascript Application</li></a>
+                    <a href="https://www.linkedin.com/in/alexander-gouge-schajer-b19695140/">
+                        <li>LinkedIn</li>
+                    </a>
+                    <a href="https://vimeo.com/thegouge">
+                        <li>Vimeo</li>
+                    </a>
+                    <a href="https://github.com/thegouge">
+                        <li>Github</li>
+                    </a>
+                    <li class="dropdown">
+                        <button class="dropbtn">JavaScript Applications</button>
+                        <div class="dropdown-content">
+                            <a href="./simplejs.html">Simple Stuff</a>
+                            <a href="./char-sheet.html">D&amp;D Character Sheet</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="float-clear"></div>
         </header>
 
+    <main>
         <div class="site-section">
             <div class="section-header">
                 <h2>Contact Info</h2>
             </div>
 
             <div class="site-section-inside">
-                <ul>
+                <ul id="contact-list">
                     <li>Email: thegouge42@gmail.com</li>
                     <li>Phone: (818) 212-3069</li>
                 </ul>
             </div>
         </div>
+    </main>
 
         <!--FOOTER-->
         <footer>
