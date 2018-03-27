@@ -45,7 +45,7 @@ body {
 
         /* MAIN NAVIGATION */
         header #main-navigation {
-            width: 49%;
+            width: 50%;
             display: inline-block;
             text-align: right;
         }
@@ -163,9 +163,8 @@ body {
 
     /* MOBILE RESPONSIVENESS */
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1030px) {
 
-    /* HEADER   */
     header #page-header {
         width: 100%;
         display: block;

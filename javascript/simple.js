@@ -34,23 +34,23 @@ function survivor() {
 
     // creating the contestant objects in an array
     var contestants = [
-        new Contestant('angela', 0),
-        new Contestant('bradley', 0),
-        new Contestant('brendan', 0),
-        new Contestant('chelsea', 0),
-        new Contestant('chris', 0),
-        new Contestant('desiree', 0),
-        new Contestant('domenick', 0),
-        new Contestant('donathan', 0),
-        new Contestant('james', 0),
-        new Contestant('jenna', 0),
-        new Contestant('kellyn', 0),
-        new Contestant('laurel', 0),
-        new Contestant('libby', 0),
-        new Contestant('michael', 0),
-        new Contestant('sebastian', 0),
-        new Contestant('stephanie', 0),
-        new Contestant('wendell', 0)
+        new Contestant('Angela', 0),
+        new Contestant('Bradley', 0),
+        new Contestant('Brendan', 0),
+        new Contestant('Chelsea', 0),
+        new Contestant('Chris', 0),
+        new Contestant('Desiree', 0),
+        new Contestant('Domenick', 0),
+        new Contestant('Donathan', 0),
+        new Contestant('James', 0),
+        new Contestant('Jenna', 0),
+        new Contestant('Kellyn', 0),
+        new Contestant('Laurel', 0),
+        new Contestant('Libby', 0),
+        new Contestant('Michael', 0),
+        new Contestant('Sebastian', 0),
+        new Contestant('Stephanie', 0),
+        new Contestant('Wendell', 0)
     ];
 
     var rankings = [];

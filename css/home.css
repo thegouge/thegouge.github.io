@@ -1,6 +1,6 @@
  /* HERO */
 
- .main-page {}
+ /* .main-page {} */
 
  .hero {
      min-height: 800px;
@@ -124,15 +124,15 @@
      border-radius: 5px;
      margin-bottom: 15px;
  }
-
- .testimonial-author {}
+/* 
+ .testimonial-author {} */
 
  .testimonial-author img {
      float: left;
      width: 80px;
      border-radius: 50%;
      margin-right: 15px;
-     -webkit-filter: sepia(50%);
+     -webkit--filter: sepia(50%);
  }
 
  .testimonial-author h5 {
@@ -147,12 +147,15 @@
  }
 
 /* MOBILE RESPONSIVENESS */
-@media all and (max-width: 1000px) {
-    /* FEATURE BOXES   */
-
-    .service-box {
-        width: 94%;
+@media all and (max-width: 1035px) {
+   
+    .site-section-inside {
         display: block;
+    }
+
+    /* FEATURE BOXES   */
+    .service-box {
+        width: 50%;
     }
 
     .service-box h4 {
@@ -165,10 +168,8 @@
     }
 
     /* TESTIMONIAL BOXES   */
-
     .testimonial-box {
-        width: 94%;
-        display: block;
+        width: 50%;
     }
 
     .testimonial-author {

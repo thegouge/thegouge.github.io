@@ -68,25 +68,23 @@ function modGen(s) {
     return Math.floor((s - 10) / 2);
 }
 
-
-
-// Creating all the ability scores
-var str = new Stat('str', document.getElementById('str').value);
-var dex = new Stat('dex', document.getElementById('dex').value);
-var con = new Stat('con', document.getElementById('con').value);
-var int = new Stat('int', document.getElementById('int').value);
-var wis = new Stat('wis', document.getElementById('wis').value);
-var cha = new Stat('cha', document.getElementById('cha').value);
-
-// Putting the Ability Scores into an Array
-var stats = [str, dex, con, int, wis, cha];
+// Creating all the ability scores in an Array
+var stats = [
+    str = new Stat('str', document.getElementById('str').value),
+    dex = new Stat('dex', document.getElementById('dex').value),
+    con = new Stat('con', document.getElementById('con').value),
+    int = new Stat('int', document.getElementById('int').value),
+    wis = new Stat('wis', document.getElementById('wis').value),
+    cha = new Stat('cha', document.getElementById('cha').value)
+];
 
 // Event Listeners
-for (var i = 0; i < stats.length; i++) {
-    document.getElementById(stats[i].name).addEventListener("change", function (event) {
+stats.forEach(function (stat) {
+    document.getElementById(stat.name).addEventListener("change", function (event) {
         updateStats();
     });
-}
+});
+
 document.getElementById('classes').addEventListener('change', function()
                     {classBonus(document.getElementById('classes').value);});
 document.getElementById('races').addEventListener('change', function()
@@ -289,7 +287,7 @@ function updateStats() {
     });
 
     // Calculating initiative Mod
-    document.getElementById('initiative').innerHTML = dex.mod;
+    document.getElementById('initiative').innerHTML = stats[1].mod;
 
     // Calculate Passive Perception
     var perception = document.getElementById('perc');
