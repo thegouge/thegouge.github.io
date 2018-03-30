@@ -9,7 +9,7 @@
         margin-bottom: 30px;
     }
         .section-header h2{
-            font-size: 30px;
+            font-size: 60px;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 300;
@@ -18,11 +18,32 @@
     .site-section-inside{
         width: 100%;
         max-width: 1200px;
+        margin-top: 100px;
         margin-left: auto;
         margin-right: auto;
     }
 
     #contact-list {
         list-style: none;
-        color: #606060;
+        color: #303030;
     }
+        #contact-list li {
+            font-size: 30px;
+        }
+
+@media all and (max-width: 1035px) {
+
+    .section-header h2 {
+        font-size: 50px;
+    }
+
+    .site-section-inside {
+        margin-top: 200px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #contact-list li {
+        font-size: 40px;
+    }
+}
