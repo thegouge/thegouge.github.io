@@ -24,7 +24,7 @@ body {
             width: 49%;
             display: inline-block
         }
-        header img {
+        #top-profile {
             margin-right: 20px;
             width: 70px;
             border-radius: 50%;
@@ -56,12 +56,20 @@ body {
             header #main-navigation ul li {
                 display: inline-block;
             }
+                .link-img {
+                    width: 50px;
+                    vertical-align: middle;
+                }
             header #main-navigation ul a {
+                display: inline-block;
                 color: inherit;
                 text-decoration: none;
-                padding: 10px 15px;
+                padding: 5px 10px;
                 border-radius: 3px;
             }
+                #js {
+                    background: white;
+                }
             header #main-navigation ul a:hover {
                 background: #444;
                 transition: 0.3s ease all;
@@ -69,6 +77,9 @@ body {
 
     /* FOOTER */
     footer{
+        display: grid;
+        grid-template-areas: ". a b";
+        grid-template-columns: 34% 34% 31%;
         background: #222;
         color: #777;
         padding: 10px;
@@ -80,6 +91,36 @@ body {
             width: 80px;
             margin: 0 auto 5px;
         }
+    
+    .self {
+        grid-area: a;
+        width: 100%;
+        text-align: center;
+    }
+
+    .attribution {
+        margin-left: 50px;
+        grid-area: b;
+        width: 100%;
+        text-align: left;
+    }
+    footer ul {
+        padding: 0;
+        text-align: center;
+        display: block;
+    }
+        footer ul li {
+            text-align: left;
+        }
+            .credit {
+                color: inherit;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .credit:hover {
+                color: orange;
+                transition: 0.5s;
+            }
 
     main {
         padding-bottom: 50px;
@@ -104,14 +145,12 @@ body {
         padding-bottom: 50px;
     }
 
-    /* The container <div> - needed to position the dropdown content */
+    /* DROPDOWN MENU */
 
     .dropdown {
         position: relative;
         display: inline-block;
     }
-
-    /* Dropdown Button */
 
     .dropbtn {
         font-size: inherit;
@@ -123,18 +162,15 @@ body {
         border: none;
     }
 
-    /* Dropdown Content (Hidden by Default) */
-
     .dropdown-content {
         display: none;
         position: absolute;
+        transform: translate(-60px);
         min-width: 153px;
         border: 1px solid #444;
         background: #222;
         z-index: 1;
     }
-
-    /* Links inside the dropdown */
 
     .dropdown-content a {
         color: black;
@@ -143,19 +179,13 @@ body {
         display: block;
     }
 
-    /* Change color of dropdown links on hover */
-
     .dropdown-content a:hover {
         background-color: #ddd
     }
 
-    /* Show the dropdown menu on hover */
-
     .dropdown:hover .dropdown-content {
         display: block;
     }
-
-    /* Change the background color of the dropdown button when the dropdown content is shown */
 
     .dropdown:hover .dropbtn {
         background: #444;
