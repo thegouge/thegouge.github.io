@@ -272,7 +272,7 @@
                         grid-area: f;
                         margin-top: 32px;
                         margin-left: 40px;
-                        /* text-align: center; */
+                        text-align: center;
                     }
                         #hit-type {
                             margin-left: 70px;
@@ -298,7 +298,6 @@
                             margin-left: 10px;
                         }
 
-            .atk-spell {}
                 #attacks {
                     margin-top: 53px;
                     margin-left: 20px;
@@ -337,7 +336,7 @@
                         line-height: 23px;
                         border: none;
                     }
-            .equipment {}
+
                 #mons {
                     margin-top: 58px;
                     margin-left: 12px;
@@ -354,7 +353,7 @@
                         background: none;
                         border: none;
                     }
-                    #mons li {}
+
                 #equip {
                     margin-top: 37px;
                     margin-right: 21px;
@@ -421,11 +420,5 @@
 @media all and (max-width: 1000px) {
     .js {
         width: 1275px;
-    }
-    header {
-        width: 1235px;
-    }
-    footer {
-        width: 1255px;
     }
 }

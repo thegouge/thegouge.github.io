@@ -101,8 +101,8 @@ body {
     .attribution {
         margin-left: 50px;
         grid-area: b;
-        width: 100%;
         text-align: left;
+        overflow: hidden;
     }
     footer ul {
         padding: 0;

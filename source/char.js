@@ -78,6 +78,73 @@ var stats = [
     cha = new Stat('cha', document.getElementById('cha').value)
 ];
 
+function rollAP() {
+    var modal = document.getElementById('ap-modal');
+    var close = document.getElementsByClassName('close')[0];
+
+    modal.style.display = "block";
+    close.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    var statLists = [
+        document.getElementById("strength"),
+        document.getElementById("dexterity"),
+        document.getElementById("constitution"),
+        document.getElementById("intelligence"),
+        document.getElementById("wisdom"),
+        document.getElementById("charisma")
+    ];
+    var results = [];
+
+    for(var i = 0; i < stats.length; i++) {
+        var num = [];
+        while (num.length < 4) {
+            num.push(Math.round(Math.random() * 6) + 1);
+        }
+        var index = num.indexOf(Math.min(...num));
+        num.splice(index, 1);
+        results.push(num.reduce((acc, curr) => {
+            return acc + curr;
+        }));
+    }
+    
+    statLists.forEach((list) => {
+        results.forEach((number) => {
+            var item = document.createElement("option");
+            item.setAttribute('value', number);
+            item.setAttribute('class', "apList");
+            list.appendChild(item);
+        });
+
+        var chosenIndexes = [];
+        var name = list.getAttribute('name');
+        var object = document.getElementById(name);
+        object.addEventListener("change", function(event) {
+            dynamicDropDown(object);
+        });
+    });
+
+    var submit = document.getElementById('ap-submit');
+
+    submit.onclick = function() {
+        modal.style.display = "none";
+        document.getElementById('str').value = document.getElementById("strengthList").value;
+        document.getElementById('dex').value = document.getElementById("dexterityList").value;
+        document.getElementById('con').value = document.getElementById("constitutionList").value;
+        document.getElementById('int').value = document.getElementById("intelligenceList").value;
+        document.getElementById('wis').value = document.getElementById("wisdomList").value;
+        document.getElementById('cha').value = document.getElementById("charismaList").value;
+
+        updateStats();
+    }
+
+}
+
+function dynamicDropDown(object) {
+    console.log('getting to it');
+}
+
 // Event Listeners
 stats.forEach(function (stat) {
     document.getElementById(stat.name).addEventListener("change", function (event) {
@@ -242,6 +309,9 @@ function levelUp() {
     } else if (x == 20) {
         alert("You're Already Max Level!");
     }
+
+    // Make the Ability Point Generation button go away
+    document.getElementById('ap').style.display = "none";
 }
 
 // Updates Proficiency bonus based on character level
@@ -270,7 +340,7 @@ function updateStats() {
     proficiencyChecker(document.getElementById("char-level").value);
 
     // Calcualte Ability Modifiers
-    stats.map(function(s) {
+    stats.forEach(function(s) {
         s.abilityScore = document.getElementById(s.name).value;
         s.mod = modGen(s.abilityScore);
         document.getElementById(s.name + 'Mod').innerHTML = s.mod;
