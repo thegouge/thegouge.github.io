@@ -85,6 +85,8 @@ function rollAP() {
     modal.style.display = "block";
     close.onclick = function () {
         modal.style.display = "none";
+        // statLists.forEach((list) => {list.remove});
+        results = [];
     }
 
     var statLists = [
@@ -136,9 +138,10 @@ function rollAP() {
         document.getElementById('wis').value = document.getElementById("wisdomList").value;
         document.getElementById('cha').value = document.getElementById("charismaList").value;
 
+        results = [];
+
         updateStats();
     }
-
 }
 
 function dynamicDropDown(object) {
