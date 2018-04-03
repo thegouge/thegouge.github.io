@@ -30,15 +30,16 @@ body {
             border-radius: 50%;
             vertical-align: middle;
         }
-        header h2 {
+        #page-header {
             vertical-align: middle;
+            text-align: left;
         }
-            header h2 a {
+            #page-header a {
                 font-size: 20px;
                 color: inherit;
                 text-decoration: none;
             }
-            header h2 a:hover {
+            #page-header a:hover {
                 color: orange;
                 transition: 0.5s;
             }
