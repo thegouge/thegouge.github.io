@@ -6,7 +6,7 @@
      min-height: 800px;
      text-align: center;
      background: #555;
-     background-image: url('../Images/main.jpg');
+     background-image: url('../images/hero.jpg');
      -webkit-filter: contrast(150%);
      filter: contrast(150%);
      text-shadow: 0px 0px 10px black;
