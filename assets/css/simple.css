@@ -20,6 +20,11 @@ body {
         overflow: auto;
     }
 
+        #time {
+            height: 97%;
+            width: 100%;
+        }
+
         .app-title {
             text-align: center;
             padding-bottom: 20px;
