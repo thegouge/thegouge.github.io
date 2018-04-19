@@ -18,21 +18,19 @@ body {
 
     /* logo nest inside header */
 
-        header #page-header {
+        #page-header {
             color: inherit;
             text-decoration: none;
             width: 49%;
-            display: inline-block
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
         }
         #top-profile {
             margin-right: 20px;
             width: 70px;
             border-radius: 50%;
             vertical-align: middle;
-        }
-        #page-header {
-            vertical-align: middle;
-            text-align: left;
         }
             #page-header a {
                 font-size: 20px;

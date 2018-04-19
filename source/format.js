@@ -1,5 +1,7 @@
-$(document).ready(function () {
-    var desiredHeight = $(window).height() - $("header").outerHeight() - $("footer").outerHeight() - 99;
-    $('main').css("min-height", desiredHeight + "px");
-    console.log(desiredHeight);
-});
+window.onload = function () {
+    var header = document.getElementById('top');
+    var footer = document.getElementById('bot');
+    var desiredHeight = window.innerHeight - header.offsetHeight - footer.offsetHeight + 1;
+
+    document.getElementById('page').style.height = desiredHeight + "px";
+};
