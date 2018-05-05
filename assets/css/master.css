@@ -180,7 +180,7 @@ body {
     }
 
     .dropdown-content a:hover {
-        background-color: #ddd
+        background-color: #ddd;
     }
 
     .dropdown:hover .dropdown-content {
@@ -191,6 +191,10 @@ body {
         background: #444;
         transition: 0.3s ease all;
     }
+        .dropdown:hover .drop-arrow {
+            transform: rotate(90deg);
+            transition: 0.5s;
+        }
 
     /* MOBILE RESPONSIVENESS */
 
