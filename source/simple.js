@@ -1,8 +1,8 @@
 //Checks to see if the inputted string is a palindrome
 function palindrome(){
     var x = document.getElementById('palindrome-input').value;
-    x = x.replace(/\W/g, '').toUpperCase();
-
+    x = x.replace(/[\W_]/g, '').toUpperCase();
+    
     var rev = x.split('').reverse().join('');
 
     if (x == rev){
