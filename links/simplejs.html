@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <link rel="stylesheet" href="../assets/css/master.css">
     <link rel="stylesheet" href="../assets/css/simple.css">
 
     <title>Simple Javascript</title>
-   
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="../source/format.js"></script>
     <script src="../source/simple.js"></script>
 </head>
+
 <body>
     <!-- HEADER -->
     <header>
@@ -77,38 +78,25 @@
             </h2>
         </div>
 
-        <div class="app-container site-section">
-            <div class="app" id="palindrome">
+        <div class="site-section">
+            <iframe class="app-container" src="https://thegouge.github.io/palindrome-checker/" frameborder="0"></iframe>
 
-                <h5 class="app-title" title="Checks to see if inputted string is a palindrome">
-                    Palindrome Checker
-                </h5>
+            <iframe class="app-container" src="https://thegouge.github.io/Roman-numeral-converter/" frameborder="0"></iframe>
 
-                <input type="text" name="Input a String" id="palindrome-input" value="" placeholder="Input a String">
+            <iframe class="app-container" src="https://thegouge.github.io/Ceasars-cipher/" frameborder="0"></iframe>
 
-                <button onclick="palindrome()">Submit</button>
+            <iframe class="app-container" src="https://thegouge.github.io/Telephone-Number-Validator/" frameborder="0"></iframe>
 
-                <p class="output" id="palindromeOutput"></p>
-            </div>
+            <iframe class="app-container" src="https://thegouge.github.io/Cash-Register/" frameborder="0"></iframe>
 
-            <div class="app" id="time calculator">
+            <div id="time-calculator">
 
-                <h5 class="app-title" title="does math with units of time (hours, minutes, seconds)">
+                <h2 class="title" title="does math with units of time (hours, minutes, seconds)">
                     Time Calculator!
-                </h5>
+                </h2>
 
-               <iframe src="https://thegouge.github.io/Time-Calculator/." frameborder="0" id="time"></iframe>
-               
-            </div>
+                <iframe id="time-frame" src="https://thegouge.github.io/Time-Calculator/" frameborder="0" id="time"></iframe>
 
-            <div class="app">
-
-                <h5 class="app-title" title="ranks survivor contestants randomly">
-                    Survivor Randomizer
-                </h5>
-
-                <button onclick="survivor()">Outwit Outlast Outplay</button>
-                <ol class="output" id="conList"></ol>
             </div>
         </div>
         <div class="float-clear"></div>
@@ -120,7 +108,7 @@
             <img src="../assets/images/profile-pic.jpg" alt="profile pic">
             <span>Gouge-Schajer Websites &copy; 2018</span>
         </div>
-    
+
         <div class="attribution">
             Icon made by:
             <ul>
@@ -136,4 +124,5 @@
         </div>
     </footer>
 </body>
+
 </html>
