@@ -1,0 +1,47 @@
+:root {
+  --rotate-angle: -60deg;
+  --background-color: black;
+  --transition-time: 0.5s;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  align-content: center;
+  left: 11px;
+  top: -95px;
+  transform: rotate(var(--rotate-angle));
+  background: var(--background-color);
+  color: white;
+  text-align: right;
+  width: 750px;
+  height: 200px;
+  transition: var(--transition-time);
+  transform-origin: 100px 170px;
+}
+
+.nav-element {
+  margin: auto;
+  height: fit-content;
+  transform: rotate(calc(-1 * var(--rotate-angle)));
+  transition: var(--transition-time);
+}
+
+#nav-tool {
+  position: relative;
+  left: 18px;
+  top: 21px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-bottom: 10px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+main {
+  background: red;
+  height: 3000px;
+}
