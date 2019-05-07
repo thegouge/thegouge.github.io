@@ -1,47 +1,84 @@
+* {
+  margin: 0;
+}
+
 :root {
   --rotate-angle: -60deg;
   --background-color: black;
   --transition-time: 0.5s;
+
+  --photo-clip: polygon(0 16%, 71% 10%, 93% 65%, 28% 83%);
 }
 
-nav {
+header {
   position: fixed;
   display: flex;
-  align-content: center;
-  left: 11px;
-  top: -95px;
+  align-content: space-around;
+  left: -1px;
+  top: -76px;
   transform: rotate(var(--rotate-angle));
-  background: var(--background-color);
+  background: transparent;
   color: white;
   text-align: right;
   width: 750px;
   height: 200px;
   transition: var(--transition-time);
-  transform-origin: 100px 170px;
+  transform-origin: 80px 150px;
+  overflow: visible;
+}
+header:before {
+  content: "";
+  position: fixed;
+  background: var(--background-color);
+  width: 750px;
+  height: 200px;
+  -webkit-clip-path: polygon(0 20%, 100% 78%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 20%, 100% 78%, 100% 100%, 0% 100%);
+  transition: var(--transition-time);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-content: space-between;
 }
 
 .nav-element {
   margin: auto;
-  height: fit-content;
   transform: rotate(calc(-1 * var(--rotate-angle)));
   transition: var(--transition-time);
 }
 
 #nav-tool {
   position: relative;
-  left: 18px;
-  top: 21px;
+  left: 23px;
+  top: 34px;
   text-align: center;
 }
 
-img {
+#img-container {
   display: block;
-  margin-bottom: 10px;
-  width: 100px;
-  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  background: white;
+  -webkit-clip-path: var(--photo-clip);
+  clip-path: var(--photo-clip);
+  transition: var(--transition-time);
+}
+#img-container:hover {
+  background: blue;
 }
 
-main {
+img {
+  margin-top: 5px;
+  width: 100px;
+  -webkit-clip-path: var(--photo-clip);
+  clip-path: var(--photo-clip);
+}
+
+body {
+  padding: 50px;
   background: red;
   height: 3000px;
+  text-align: center;
 }

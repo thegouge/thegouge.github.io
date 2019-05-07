@@ -5,7 +5,7 @@ function rotateNav() {
     document.documentElement.style.setProperty("--rotate-angle", "-60deg");
     document.documentElement.style.setProperty("--background-color", "black");
   } else {
-    document.documentElement.style.setProperty("--rotate-angle", "100deg");
+    document.documentElement.style.setProperty("--rotate-angle", "96deg");
     document.documentElement.style.setProperty("--background-color", "blue");
   }
 
