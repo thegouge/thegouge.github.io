@@ -5,3 +5,5 @@ Created through the help of StackSkill's "Javascript Basics for Beginners" cours
 
 Nothing in the website is my own work, all images, photos, and even the style of the page itself is created by others.
 Eventually I'll replace it with my own stuff of course
+
+either way, you can check it out right [here](https://thegouge.github.io)
