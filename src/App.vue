@@ -8,19 +8,26 @@
         <button v-on:click="rotateNav">Menu</button>
       </div>
       <nav>
-        <router-link to="/about" class="nav-element">
+        <router-link to="/about" class="nav-element link">
           <div>About</div>
         </router-link>
-        <div class="nav-element">Nav Element</div>
-        <div class="nav-element">Nav Element</div>
-        <div class="nav-element">Nav Element</div>
-        <div class="nav-element">Nav Element</div>
-        <div class="nav-element">Nav Element</div>
+        <router-link to="/" class="nav-element link">
+          <div>Nav Element</div>
+        </router-link>
+        <router-link to="/" class="nav-element link">
+          <div>Nav Element</div>
+        </router-link>
+        <router-link to="/" class="nav-element link">
+          <div>Nav Element</div>
+        </router-link>
+        <router-link to="/" class="nav-element link">
+          <div>Nav Element</div>
+        </router-link>
+        <router-link to="/" class="nav-element link">
+          <div>Nav Element</div>
+        </router-link>
       </nav>
     </header>
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-    </div>
     <router-view/>
   </div>
 </template>
@@ -94,21 +101,41 @@ header:before {
 }
 
 nav {
+  background: pink;
+  position: relative;
+  left: 30px;
+  top: 9px;
   width: 100%;
   display: flex;
   align-content: space-between;
+  /* transform: rotate(calc(-1 * var(--rotate-angle) - 96)); */
+}
+
+router-link {
+  color: inherit;
+}
+router-link-visited {
+  color: inherit;
 }
 
 .nav-element {
+  display: block;
   margin: auto;
+  color: white;
+  text-decoration: none;
   transform: rotate(calc(-1 * var(--rotate-angle)));
   transition: var(--transition-time);
 }
 
+.link {
+  padding: 10px;
+  background: green;
+}
+
 #nav-tool {
   position: relative;
-  left: 23px;
-  top: 34px;
+  top: 35px;
+  left: 21px;
   text-align: center;
 }
 
