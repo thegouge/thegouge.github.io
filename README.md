@@ -1,29 +1,8 @@
-# portfolio-site
+# Personal-Webpage
+A webpage for me to display myself and my accomplishments!
 
-## Project setup
-```
-npm install
-```
+Here is the revamp of my personal portfolio website! Made in Vue.js with the Vue Router
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+all of the aesthetics are based on Atlus's game, Persona 5
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+and you can check it out right [here](https://thegouge.github.io)
