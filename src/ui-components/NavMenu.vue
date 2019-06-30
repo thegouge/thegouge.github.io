@@ -2,7 +2,7 @@
   <header id="head" class="inactive">
     <div id="nav-tool" class="nav-element">
       <router-link to="/" id="img-container" title="home">
-        <img id="profile-pic" src="../assets/me.jpg" alt="my face!">
+        <img id="profile-pic" src="../assets/me.jpg" alt="my face!" />
       </router-link>
 
       <button v-on:click="rotateNav">Menu</button>
@@ -12,27 +12,27 @@
       <router-link to="/about" class="nav-element link">
         <div>About</div>
       </router-link>
-      <router-link to="/" class="nav-element link">
-        <div>Nav Element</div>
+      <router-link to="/spa-landing" class="nav-element link">
+        <div>Single Page Apps</div>
       </router-link>
       <router-link to="/" class="nav-element link">
-        <div>Nav Element</div>
+        <div>Early Websites</div>
       </router-link>
       <router-link to="/" class="nav-element link">
-        <div>Nav Element</div>
+        <div>Linkedin</div>
       </router-link>
       <router-link to="/" class="nav-element link">
-        <div>Nav Element</div>
+        <div>Github</div>
       </router-link>
       <router-link to="/" class="nav-element link">
-        <div>Nav Element</div>
+        <div>Contact Info</div>
       </router-link>
     </nav>
   </header>
 </template>
 
 <script>
-let navDisplay = false;
+// let navDisplay = false;
 
 export default {
   data() {
