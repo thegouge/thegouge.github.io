@@ -5,7 +5,7 @@
         <img id="profile-pic" src="../assets/me.jpg" alt="my face!" />
       </router-link>
 
-      <button v-on:click="rotateNav">Menu</button>
+      <button class="nav-button" v-on:click="rotateNav">Menu</button>
     </div>
 
     <nav>
@@ -36,19 +36,25 @@
 
 export default {
   data() {
-    return { navDisplay: false };
+    return { navDisplay: false, buttonPosition: 0 };
   },
   methods: {
     rotateNav() {
       if (this.navDisplay) {
         document.documentElement.style.setProperty("--rotate-angle", "-60deg");
         document.documentElement.style.setProperty("--nav-color", "black");
+        document
+          .getElementsByClassName("nav-button")[0]
+          .style.setProperty("left", "0");
       } else {
         document.documentElement.style.setProperty("--rotate-angle", "96deg");
         document.documentElement.style.setProperty(
           "--nav-color",
           "var(--open-nav-color)"
         );
+        document
+          .getElementsByClassName("nav-button")[0]
+          .style.setProperty("left", "-10px");
       }
 
       this.navDisplay = !this.navDisplay;
@@ -101,6 +107,12 @@ router-link {
 }
 router-link-visited {
   color: inherit;
+}
+
+.nav-button {
+  position: relative;
+  left: 0;
+  transition: var(--transition-time);
 }
 
 .nav-element {
