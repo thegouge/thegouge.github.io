@@ -1,0 +1,45 @@
+body {
+  background: rgb(205, 217, 219);
+}
+
+.site-section {
+  padding: 50px 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app-container {
+  padding: 0;
+  overflow: auto;
+  width: 410px;
+  height: 390px;
+  margin: 10px;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 20px;
+  color: white;
+  cursor: default;
+  user-select: none;
+}
+
+#time-calculator {
+  margin: 10px;
+  background: rgb(29, 30, 92);
+  padding: 20px;
+  text-align: center;
+  border: 5px solid rgb(161, 161, 161);
+}
+
+#time-frame {
+  margin: auto;
+  width: 350px;
+  height: 260px;
+}
+
+/* Mobile Responsiveness */
+
+@media all and (max-width: 1120px) {
+}

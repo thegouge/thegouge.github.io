@@ -16,22 +16,22 @@
 
     <nav>
       <router-link to="/about" class="nav-element link">
-        <div>About</div>
+        <div class="link-content">About</div>
       </router-link>
       <router-link to="/spa-landing" class="nav-element link">
-        <div>Single Page Apps</div>
+        <div class="link-content">Single Page Apps</div>
       </router-link>
       <router-link to="/early-landing" class="nav-element link">
-        <div>Early Websites</div>
+        <div class="link-content">Early Websites</div>
       </router-link>
       <a href="https://linkedin.com/in/thegouge/" class="nav-element link">
-        <div>Linkedin</div>
+        <div class="link-content">Linkedin</div>
       </a>
       <a href="https://github.com/thegouge" class="nav-element link">
-        <div>Github</div>
+        <div class="link-content">Github</div>
       </a>
       <router-link to="/contact" class="nav-element link">
-        <div>Contact Info</div>
+        <div class="link-content">Contact Info</div>
       </router-link>
     </nav>
   </header>
@@ -87,11 +87,12 @@ header {
   align-content: space-around;
   left: -1px;
   top: -76px;
+  padding: 0;
   transform: rotate(var(--rotate-angle));
   background: transparent;
   color: white;
   text-align: right;
-  width: 700px;
+  width: 675px;
   height: 200px;
   transition: var(--transition-time);
   transform-origin: 80px 150px;
@@ -101,7 +102,7 @@ header:before {
   content: "";
   position: fixed;
   background: var(--nav-color);
-  width: 750px;
+  width: 700px;
   height: 200px;
   -webkit-clip-path: polygon(0 20%, 100% 78%, 100% 100%, 0% 100%);
   clip-path: polygon(0 20%, 100% 78%, 100% 100%, 0% 100%);
