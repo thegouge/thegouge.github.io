@@ -2,7 +2,7 @@
   <div class="home">
     <main>
       <div class="hero">
-        <div id="hero-content">
+        <div id="hero-content" v-on:click="randomColor()" :style="`color: ${textColors}`">
           <h1 id="hero-title">Alex Gouge-Schajer's Website!</h1>
           <p>(Pronounced gooj shay-jer)</p>
         </div>
@@ -104,7 +104,7 @@
             <p>
               I'm a developer, of course I'm a nerd. Video games are what got me
               into coding in the first place, but I'd learn how to make games
-              mostly as a hobby
+              as a hobby
             </p>
           </div>
         </div>
@@ -115,7 +115,18 @@
 
 <script>
 export default {
-  name: "home"
+  name: "home",
+  data: () => {
+    return { textColors: "white" };
+  },
+  methods: {
+    randomColor() {
+      this.textColors = `rgb(${this.randomColorNumber()}, ${this.randomColorNumber()}, ${this.randomColorNumber()})`;
+    },
+    randomColorNumber() {
+      return Math.round(Math.random() * 255);
+    }
+  }
 };
 </script>
 
@@ -127,13 +138,13 @@ h1 {
 /* HERO */
 
 .hero {
-  min-height: 800px;
+  min-height: 500px;
   text-align: center;
   background: #555;
   background-image: url("../assets/hero.jpg");
   -webkit-filter: contrast(150%);
   filter: contrast(150%);
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 20px black;
   background-size: cover;
 }
 
@@ -143,19 +154,19 @@ h1 {
 }
 
 #hero-title {
-  color: white;
   margin: 0;
+  margin-top: 20px;
   font-size: 100px;
   cursor: pointer;
   user-select: none;
 }
 
 #hero-content p {
-  color: white;
   font-size: 32px;
   margin-bottom: 60px;
   cursor: pointer;
   user-select: none;
+  text-shadow: inherit;
 }
 
 /* SERVICES */

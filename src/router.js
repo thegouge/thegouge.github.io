@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import AppSelector from "./views/AppSelector.vue";
+import Contact from "./views/Contact.vue";
+import EarlySitesSelector from "./views/EarlySitesSelector.vue";
 
 Vue.use(Router);
 
@@ -25,6 +27,16 @@ export default new Router({
       path: "/spa-landing",
       name: "single-page-applications",
       component: AppSelector,
+    },
+    {
+      path: "/early-landing",
+      name: "early-sites",
+      component: EarlySitesSelector,
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: Contact,
     },
   ],
 });

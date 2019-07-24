@@ -5,7 +5,13 @@
         <img id="profile-pic" src="../assets/me.jpg" alt="my face!" />
       </router-link>
 
-      <button class="nav-button" v-on:click="rotateNav">Menu</button>
+      <div class="nav-button-box" :style="`background: ${navButtonText}`">
+        <div
+          class="nav-button"
+          @click="rotateNav"
+          :style="`background: ${navButtonBackground}; color: ${navButtonText}`"
+        >Nav Menu</div>
+      </div>
     </div>
 
     <nav>
@@ -15,16 +21,16 @@
       <router-link to="/spa-landing" class="nav-element link">
         <div>Single Page Apps</div>
       </router-link>
-      <router-link to="/" class="nav-element link">
+      <router-link to="/early-landing" class="nav-element link">
         <div>Early Websites</div>
       </router-link>
-      <router-link to="/" class="nav-element link">
+      <a href="https://linkedin.com/in/thegouge/" class="nav-element link">
         <div>Linkedin</div>
-      </router-link>
-      <router-link to="/" class="nav-element link">
+      </a>
+      <a href="https://github.com/thegouge" class="nav-element link">
         <div>Github</div>
-      </router-link>
-      <router-link to="/" class="nav-element link">
+      </a>
+      <router-link to="/contact" class="nav-element link">
         <div>Contact Info</div>
       </router-link>
     </nav>
@@ -36,16 +42,24 @@
 
 export default {
   data() {
-    return { navDisplay: false, buttonPosition: 0 };
+    return {
+      navDisplay: false,
+      buttonPosition: 0,
+      navColor: "black",
+      navButtonBackground: "black",
+      navButtonText: "white"
+    };
   },
   methods: {
     rotateNav() {
       if (this.navDisplay) {
         document.documentElement.style.setProperty("--rotate-angle", "-60deg");
         document.documentElement.style.setProperty("--nav-color", "black");
+        this.navButtonBackground = "black";
+        this.navButtonText = "white";
         document
-          .getElementsByClassName("nav-button")[0]
-          .style.setProperty("left", "0");
+          .getElementsByClassName("nav-button-box")[0]
+          .style.setProperty("left", "15px");
       } else {
         document.documentElement.style.setProperty("--rotate-angle", "96deg");
         document.documentElement.style.setProperty(
@@ -53,8 +67,10 @@ export default {
           "var(--open-nav-color)"
         );
         document
-          .getElementsByClassName("nav-button")[0]
-          .style.setProperty("left", "-10px");
+          .getElementsByClassName("nav-button-box")[0]
+          .style.setProperty("left", "5px");
+        this.navButtonBackground = "white";
+        this.navButtonText = "black";
       }
 
       this.navDisplay = !this.navDisplay;
@@ -75,7 +91,7 @@ header {
   background: transparent;
   color: white;
   text-align: right;
-  width: 750px;
+  width: 700px;
   height: 200px;
   transition: var(--transition-time);
   transform-origin: 80px 150px;
@@ -94,12 +110,11 @@ header:before {
 
 nav {
   position: relative;
-  left: 30px;
+  left: 45px;
   top: 9px;
   width: 100%;
   display: flex;
-  align-content: space-between;
-  /* transform: rotate(calc(-1 * var(--rotate-angle) - 96)); */
+  align-content: space-around;
 }
 
 router-link {
@@ -109,10 +124,22 @@ router-link-visited {
   color: inherit;
 }
 
-.nav-button {
+.nav-button-box {
   position: relative;
-  left: 0;
+  left: 15px;
+  top: -4px;
   transition: var(--transition-time);
+  padding: 5px;
+  user-select: none;
+  cursor: pointer;
+  clip-path: polygon(27% 0, 100% 8%, 71% 100%, 0 81%);
+}
+.nav-button {
+  margin: auto;
+  padding: 7px 20px;
+  transition: var(--transition-time);
+  width: fit-content;
+  clip-path: polygon(27% 0, 100% 8%, 71% 100%, 0 81%);
 }
 
 .nav-element {
@@ -125,8 +152,14 @@ router-link-visited {
 }
 
 .link {
-  padding: 10px;
-  background: green;
+  padding: 5px;
+  background: black;
+  width: 15%;
+  text-align: center;
+}
+.link:hover {
+  color: black;
+  background: white;
 }
 
 #nav-tool {
@@ -144,6 +177,9 @@ router-link-visited {
   -webkit-clip-path: var(--photo-clip);
   clip-path: var(--photo-clip);
   transition: var(--transition-time);
+  position: relative;
+  left: 15px;
+  top: 9px;
 }
 #img-container:hover {
   background: red;
