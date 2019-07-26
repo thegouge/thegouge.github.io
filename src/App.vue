@@ -31,14 +31,14 @@ export default {
   --rotate-angle: -60deg;
   --nav-color: black;
   --transition-time: 0.5s;
-  --open-nav-color: blue;
+  --open-nav-color: red;
 
   --photo-clip: polygon(0 16%, 71% 10%, 93% 65%, 28% 83%);
 }
 
 body {
   /* padding: 50px; */
-  background: red;
+  background: black;
   text-align: center;
 }
 </style>

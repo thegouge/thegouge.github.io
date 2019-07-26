@@ -135,6 +135,10 @@ h1 {
   text-align: center;
 }
 
+main {
+  padding-top: 0;
+}
+
 /* HERO */
 
 .hero {

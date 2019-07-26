@@ -1,17 +1,17 @@
 <template>
   <section class="app-selector">
     <div id="back-button"></div>
-    <iframe class="selected-app" :src="url" frameborder="0"></iframe>
+    <iframe class="selected-app" :src="url" frameborder="10"></iframe>
   </section>
 </template>
 
 <script>
 export default {
   name: "app-landing",
-  computed: {
-    url() {
-      return "https://thegouge.github.io/character-sheet";
-    }
+  data() {
+    return {
+      url: "https://thegouge.github.io/character-sheet"
+    };
   }
 };
 </script>
