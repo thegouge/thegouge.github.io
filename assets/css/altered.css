@@ -1,0 +1,14 @@
+.profile-pic {
+  display: block;
+  margin: auto;
+  width: 30%;
+  border-radius: 50%;
+}
+
+.img-link img {
+  border: 3px solid black;
+}
+
+#king-trivia {
+  width: 100%;
+}
