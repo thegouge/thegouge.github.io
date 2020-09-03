@@ -1,53 +1,78 @@
 .profile-pic {
-  display: block;
-  margin: auto;
-  width: 30%;
-  border-radius: 50%;
+	display: block;
+	margin: auto;
+	width: 30%;
+	border-radius: 50%;
+}
+
+.major {
+	text-align: center;
 }
 
 .icons {
-  text-align: center;
+	text-align: center;
 }
 
 .image {
-  transition: 0.5s;
+	transition: 0.5s;
 }
 
 .img-link {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
 }
 
 .link-img {
-  transition: 0.5s;
-  object-fit: contain;
+	transition: 0.5s;
+	object-fit: contain;
 }
 
 .img-link:hover {
-  background-color: orange;
+	background-color: orange;
 }
 
 .img-link:hover img {
-  transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.logo-img {
+	transition: 0.5s;
 }
 
 #logo1 {
-  object-fit: contain;
-  transition: 0.5s;
+	object-fit: contain;
+	transition: 0.5s;
 }
 
 #logo2 {
-  object-fit: contain;
-  transition: 0.5s;
+	object-fit: contain;
+	transition: 0.5s;
 }
 
 #logo3 {
-  object-fit: contain;
-  transition: 0.5s;
+	object-fit: contain;
+	transition: 0.5s;
+}
+
+#logo4 {
+	object-fit: contain;
+	transition: 0.5s;
+}
+#logo5 {
+	object-fit: contain;
+	transition: 0.5s;
+}
+#logo6 {
+	object-fit: contain;
+	transition: 0.5s;
+}
+
+.nda {
+	background-color: rgb(122, 29, 29);
 }
 
 #fullstack {
-  filter: brightness(0.9);
+	filter: brightness(0.9);
 }
