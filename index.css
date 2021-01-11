@@ -1,0 +1,12 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	cursor: url('/custom-cursor.png'), auto;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background: red;
+}
