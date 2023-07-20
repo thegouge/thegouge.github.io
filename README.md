@@ -11,7 +11,6 @@ Icons:
 - [Font Awesome](fontawesome.io)
 
 Pictures & logos:
-- Ankit Patel
 - [HackerRank](https://www.hackerrank.com/)
 - [Free Code Camp](freecodecamp.org)
 - [Blizzard](https://overwatch.blizzard.com/en-us/)
