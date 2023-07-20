@@ -8,14 +8,16 @@ Design:
 "Story" from HTML5up
 
 Icons:
-[Font Awesome](fontawesome.io)
+- [Font Awesome](fontawesome.io)
 
-Pictures:
-Ankit Patel
-[Codesignal](app.codesignal.com)
-[Free Code Camp](freecodecamp.org)
+Pictures & logos:
+- Ankit Patel
+- [HackerRank](https://www.hackerrank.com/)
+- [Free Code Camp](freecodecamp.org)
+- [Blizzard](https://overwatch.blizzard.com/en-us/)
+- [King Trivia](https://kingtrivia.com/)
 
 Other:
-[jQuery](jquery.com)
-[Scrollex](github.com/ajlkn/jquery.scrollex)
-[Responsive Tools](github.com/ajlkn/responsive-tools)
+- [jQuery](jquery.com)
+- [Scrollex](github.com/ajlkn/jquery.scrollex)
+- [Responsive Tools](github.com/ajlkn/responsive-tools)
