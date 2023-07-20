@@ -1,8 +1,8 @@
-#My Personal Portfolio Site!
+# My Personal Portfolio Site!
 
 This project is a portfolio website for Alex Gouge-Schajer (pronounced gooj shay-jer) to show some projects and talk about himself!
 
-#Credits
+# Credits
 
 Design:
 "Story" from HTML5up
