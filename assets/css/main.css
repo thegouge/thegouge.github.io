@@ -2625,6 +2625,12 @@ input, select, textarea {
 	}
 
 /* Image */
+  .hr {
+    background-color: #0D141E;
+  }
+    .hr .image {
+      margin-top: 4rem;
+    }
 
 	.image {
 		border: 0;
